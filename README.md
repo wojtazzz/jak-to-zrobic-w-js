@@ -1,4 +1,4 @@
-**Uwage:** Materiał w trakcie przygotowania - pamiętaj aby zajrzeć tu przes szkoleniem!
+**Uwage:** Materiał w trakcie przygotowania - pamiętaj aby zajrzeć tu na dzień przed szkoleniem!
 # Jak to zrobić w JavaScript
 
 Przykłady i ćwieczenia prezentowane w ramach mini warsztatów na konferencji
@@ -16,8 +16,12 @@ Agile & Automation Days.
 
     `npm install`
 2. Sprawdź poprawność instalacji
-  * Uruchom serwer z przykładową aplikacją wydając polecenie: `gulp webserver`
-  * Wystartuj przykładowy test `gulp test-sample`
+  * Uruchom serwer z przykładową aplikacją wydając polecenie:
+
+    `gulp webserver`
+  * Wystartuj przykładowy test poleceniem
+
+    `gulp test-sample`
 3. Jeśli nie masz swojego ulubionego edytora JavaScript zainstaluj [Atom](https://atom.io/)
 
 **Uwaga:** W przypadku problemów w środowisku Windows zapoznaj się z postem [Nodejs cannot find installed module on Windows](http://stackoverflow.com/questions/9587665/nodejs-cannot-find-installed-module-on-windows/). Jeśli ciągle będziesz miał problem zgłoś go w zakładce `Issues`. Postaram się pomóc.
