@@ -21,7 +21,7 @@ Agile & Automation Days.
     `gulp webserver`
   * Wystartuj przykładowy test poleceniem
 
-    `gulp test-sample`
+    `gulp test-minimal`
 3. Jeśli nie masz swojego ulubionego edytora JavaScript zainstaluj [Atom](https://atom.io/)
 
 **Uwaga:** W przypadku problemów w środowisku Windows zapoznaj się z postem [Nodejs cannot find installed module on Windows](http://stackoverflow.com/questions/9587665/nodejs-cannot-find-installed-module-on-windows/). Jeśli ciągle będziesz miał problem zgłoś go w zakładce `Issues`. Postaram się pomóc.
