@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>How to do it in JavaScript</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" type="text/css" href="how-to-do-it-js.css">
+</head>
+
+<body class="swag-line">
+  <div class="container-overflow-wrap">
+    <div class="container">
+      <nav role="navigation" class="navbar navbar-default navbar-tall navbar-full">
+    <div class="navbar-header">
+      <button data-target="#global-nav" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand">How to do it in JavaScript</a>
+    </div>
+
+    <div id="global-nav" class="collapse navbar-collapse">
+      <div class="navbar-right">
+        <ul class="nav navbar-nav">
+
+            <li>
+              <a href="/collections/all">Lesson 1</a>
+            </li>
+
+            <li>
+              <a href="/pages/about-us">Lesson 2</a>
+            </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <div class="hidden-xs">
+    <div class="row row-padded row-bordered">
+      <div class="col-sm-8 col-sm-offset-2 text-center">
+        <h2 class="m-b-md">"Each Bootstrap theme provides a comprehensive set of tools that's super easy to get up and running&mdash;it gives you a huge leg up when starting a project"</h2>
+        <h5 class="text-muted">Katie Zhu, Product Engineer at Medium</h5>
+      </div>
+    </div>
+
+    <div class="row row-padded homepage-grid row-bordered p-t text-center">
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span>
+        <h5><strong>Components and examples</strong></h5>
+        <p class="text-muted">Each theme features new components built to the same level of quality as Bootstrap and highlighted with several example pages.</p>
+      </div>
+
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span>
+        <h5><strong>Tons of variables</strong></h5>
+        <p class="text-muted">Theme components inherit much of their style from variables, exactly like Bootstrap. Change a few values and the theme adapts.</p>
+      </div>
+
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span>
+        <h5><strong>Source files and tools</strong></h5>
+        <p class="text-muted">Each Bootstrap theme includes all the source and compiled files you'll need, including npm and Gulp based build tools.</p>
+      </div>
+    </div>
+
+    <div class="row row-padded row-bordered row-centered">
+      <div class="col-sm-12">
+        <div class="row m-b-lg">
+          <div class="col-sm-8 col-sm-offset-2 text-center">
+            <h3><strong>From industry leaders</strong></h3>
+            <h4 class="m-b-lg">Bootstrap Themes are built by the folks who not only brought you frameworks like <a target="_blank" href="getbootstrap.com">Bootstrap</a>, <a target="_blank" href="http://getskeleton.com/">Skeleton</a>, and <a target="_blank" href="http://goratchet.com/">Ratchet</a>, but have years of experience at innovative companies like Twitter, GitHub, Medium, and others.</h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 m-b-lg">
+            <div class="panel panel-default panel-profile m-b-0">
+              <div class="panel-heading"></div>
+              <div class="panel-body text-center">
+
+                <h5 class="panel-title">Jacob Thornton</h5>
+                <p class="m-b">Star trek flow so they klingon me. I wrote this here code. Two times.</p>
+                <a class="btn btn-primary-outline btn-sm m-b" target="_blank" href="//github.com/fat">
+                  <span class="icon icon-add-user"></span> View GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 m-b-lg">
+            <div class="panel panel-default panel-profile m-b-0">
+              <div class="panel-heading"></div>
+              <div class="panel-body text-center">                
+                <h5 class="panel-title">Mark Otto</h5>
+                <p class="m-b">Design at GitHub. Creator of Bootstrap. Previously at Twitter. Huge nerd.</p>
+                <a class="btn btn-primary-outline btn-sm m-b" target="_blank" href="//github.com/mdo">
+                  <span class="icon icon-add-user"></span> View GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 m-b-lg">
+            <div class="panel panel-default panel-profile m-b-0">
+              <div class="panel-heading"></div>
+              <div class="panel-body text-center">                
+                <h5 class="panel-title">Dave Gamache</h5>
+                <p class="m-b">Burritos are my spirit animal. Previously Twitter and Medium.</p>
+                <a class="btn btn-primary-outline btn-sm m-b" target="_blank" href="//github.com/dhg">
+                  <span class="icon icon-add-user"></span> View GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row row-padded row-bordered row-centered">
+      <div class="col-sm-6">
+        <div class="homepage-terminal-example">
+          <p class="m-b-md">
+            <span class="text-muted">&gt; $ npm install</span><br>
+            Everything installed!
+          </p>
+          <p class="m-b-md">
+            <span class="text-muted">&gt; $ npm start</span><br>
+            Server started http://localhost:9001<br>
+            LiveReload started<br>
+            Opening http://localhost:9001/docs/
+          </p>
+          <p>
+            <span class="text-muted">&gt; $ is that it?</span><br>
+            Yup, it's that simple.
+          </p>
+        </div>
+      </div>
+      <div class="col-sm-5 col-sm-offset-1">
+        <h3><strong>With stellar documentation</strong></h3>
+        <h4 class="m-b-md">We work hard to make sure every new component and plugin is thoroughly documented with live examples and code blocks for easier use and customization&mdash;just like Bootstrap itself.</h4>
+        <a href="http://bootstrap-themes.github.io/dashboard/docs/" target="_blank" class="btn btn-primary">Explore the Dashboard docs</a>
+      </div>
+    </div>
+
+
+  <footer class="footer clearfix">
+
+      <ul class="footer-social-buttons">
+        <li class="btn-follow hidden-xs">
+          <iframe data-screen-name="getbootstrap" src="http://platform.twitter.com/widgets/follow_button.450bd5fbaeab74caf9d49a3141d20693.en.html#_=1445719250359&amp;dnt=true&amp;id=twitter-widget-0&amp;lang=en&amp;screen_name=getbootstrap&amp;show_count=true&amp;show_screen_name=true&amp;size=m" title="Twitter Follow Button" style="position: static; visibility: visible; width: 233px; height: 20px;" class="twitter-follow-button twitter-follow-button-rendered" allowtransparency="true" scrolling="no" id="twitter-widget-0" frameborder="0"></iframe>
+        </li>
+        <li class="btn-tweet">
+          <iframe data-url="http://themes.getbootstrap.com/" src="http://platform.twitter.com/widgets/tweet_button.a428ab2e859e8008e0df5404770eb017.en.html#_=1445719250378&amp;count=horizontal&amp;dnt=true&amp;id=twitter-widget-1&amp;lang=en&amp;original_referer=http%3A%2F%2Fthemes.getbootstrap.com%2F&amp;related=getbootstrap%2Cmdo%2Cfat%2Cdhg&amp;size=m&amp;text=Bootstrap%20Themes&amp;type=share&amp;url=http%3A%2F%2Fthemes.getbootstrap.com%2F&amp;via=getbootstrap" title="Twitter Tweet Button" style="position: static; visibility: visible; width: 98px; height: 20px;" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" allowtransparency="true" scrolling="no" id="twitter-widget-1" frameborder="0"></iframe>
+        </li>
+      </ul>
+
+      <p class="hidden-xs">
+        Designed and built with all the love in the world by
+        <a href="https://twitter.com/mdo" target="_blank">@mdo</a>,
+        <a href="https://twitter.com/fat" target="_blank">@fat</a>, and
+        <a href="https://twitter.com/dhg" target="_blank">@dhg</a>.
+      </p>
+
+      <ul class="footer-list">
+
+          <li class="footer-list-item">
+            <a class="footer-list-link" href="/pages/about-us">About</a>
+          </li>
+
+          <li class="footer-list-item">
+            <a class="footer-list-link" href="/pages/terms-of-service">Terms</a>
+          </li>
+
+          <li class="footer-list-item">
+            <a class="footer-list-link" href="/pages/privacy-policy">Privacy</a>
+          </li>
+
+          <li class="footer-list-item">
+            <a class="footer-list-link" href="/pages/our-license">Licenses</a>
+          </li>
+
+          <li class="footer-list-item">
+            <a class="footer-list-link" href="/pages/faq">FAQ</a>
+          </li>
+
+          <li class="footer-list-item">
+            <a class="footer-list-link" href="http://getbootstrap.com">Bootstrap</a>
+          </li>
+
+      </ul>
+
+  </div>
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
+</body>
+</html>
