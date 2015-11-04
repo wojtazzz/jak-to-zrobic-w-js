@@ -1,7 +1,7 @@
 **Uwage:** Materiał w trakcie przygotowania - pamiętaj aby zajrzeć tu na dzień przed szkoleniem!
 # Jak to zrobić w JavaScript
 
-Przykłady i ćwieczenia prezentowane w ramach mini warsztatów na konferencji
+Przykłady i ćwiczenia prezentowane w ramach mini warsztatów na konferencji
 Agile & Automation Days.
 
 ## Przygotowanie do warsztatów
@@ -28,7 +28,7 @@ Agile & Automation Days.
 
 
 ## Przydatne materiały
-* Jeśli nie programowaleś do tej pory ten kurs powinien pomóc [Learn JavaScript](https://www.codecademy.com/tracks/javascript)
+* Jeśli nie programowałeś do tej pory ten kurs powinien pomóc [Learn JavaScript](https://www.codecademy.com/tracks/javascript)
 * [Mozilla JavaScript Guide - Re-introduction to JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
 * [Mozilla JavaScript Guide - Working with Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
 * [Protractor - strona domowa](https://angular.github.io/protractor/#/)
