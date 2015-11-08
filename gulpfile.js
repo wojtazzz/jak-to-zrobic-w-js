@@ -17,10 +17,10 @@
      * @returns {*}
      */
 
-    function runSpec(suiteName) {
+    function runSpec(confName, suiteName) {
         return gulp.src([])
             .pipe(protractor({
-                configFile: 'conf.js',
+                configFile: confName,
                 args: ['--suite', suiteName]
             }))
             .on('end', function() {
@@ -52,17 +52,28 @@
      * Runs the 'minimal' specification.
      */
     gulp.task('test-minimal', function () {
-      return gulp.src([])
-          .pipe(protractor({
-              configFile: 'conf/minimal.js',
-              args: []
-          }))
-          .on('end', function() {
-              console.log('Test completed.');
-          })
-          .on('error', function (e) {
-              throw e
-          });
+
+      return runSpec('conf/minimal.js', '');
+
+    });
+
+    /**
+      * Runs the 'minimal' specification with jasmine reporter.
+      */
+    gulp.task('test-with-reporter', function () {
+
+      return runSpec('conf/with_reporter.js', '');
+
+    });
+
+    /**
+      * Runs the 'home' specification with jasmine reporter.
+      */
+
+    gulp.task('test-home', function () {
+
+        return runSpec('conf/home.js', '');
+
     });
 
     /**
@@ -70,25 +81,17 @@
      */
     gulp.task('test-smoke', function () {
 
-        return runSpec('smoke');
+      return runSpec('conf/smoke.js', '');
 
     });
 
     /**
-     * Runs the 'full' suite.
-     */
-    gulp.task('test-full', function () {
+      * Runs the 'home' specification with jasmine reporter.
+      */
 
-        return runSpec('full');
+    gulp.task('test-complete', function () {
 
-    });
-
-    /**
-     * Runs the 'create-product' suite.
-     */
-    gulp.task('test-create-product', function () {
-
-        return runSpec('create-product');
+        return runSpec('conf/complete.js', '');
 
     });
 
