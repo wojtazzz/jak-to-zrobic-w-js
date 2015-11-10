@@ -1,5 +1,5 @@
-  var Q = require('q'),
-      clc = require('cli-color');
+  var clc = require('cli-color'),
+      Screenshot = require('../util/screenshots.js');
 
   var Page = function () {
 
@@ -24,16 +24,16 @@
    * Collects and prints page performance data.
    */
   Page.prototype.logNavigationTiming = function(){
+
+      var self = this;
       var script = 'var performance = window.performance || window.webkitPerformance || window.mozPerformance || window.msPerformance || {}; var timings = performance.timing || {}; return timings;';
       var text = browser.executeScript(script).then(function (t) {
-
           var interactive = t.domInteractive - t.navigationStart,
           dcl = t.domContentLoadedEventStart - t.navigationStart,
           complete = t.domComplete - t.navigationStart;
           var textContent = ['interactive: ' + interactive + 'ms, ' +
               'dcl: ' + dcl + 'ms, complete: ' + complete + 'ms'];
-
-          console.error.apply(console, [clc.cyan('DEBUG|')].concat(Array.prototype.slice.call(textContent)));
+          self.log('Page load time: ', textContent);
       });
 
   };
@@ -67,6 +67,12 @@
       if (this.logEnabled) {
           console.error.apply(console, [clc.cyan('DEBUG|')].concat(Array.prototype.slice.call(arguments)));
       }
+  };
+
+  Page.prototype.takeScreenshot = function (name) {
+        browser.driver.takeScreenshot().then(function (png) {
+            new Screenshot(png, name + ".png");
+        });
   };
 
   module.exports = Page;

@@ -1,4 +1,4 @@
-var Page = require('./page.js');
+var Page = require('./page.complete.js');
 
 var HomePage = function() {
 

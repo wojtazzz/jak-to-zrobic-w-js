@@ -17,10 +17,15 @@ exports.config = {
 
     specs: ['../src/specs/minimal.spec.js'],
 
+    capabilities: {
+      'browserName' : 'firefox',
+    },
+
     /// MINIMAL CONFIGURATION END /////////////////////////////////////////////////////
 
-    capabilities: {
-        'browserName' : 'firefox',
-    }
+    jasmineNodeOpts: {defaultTimeoutInterval: 60000},
+    onPrepare: function () {
+      browser.ignoreSynchronization = true;
+    },
 
 };
