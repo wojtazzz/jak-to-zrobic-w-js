@@ -1,5 +1,5 @@
 var homePage = require('../pages/home');
-var lesson1Page = require('../pages/lesson1');
+var registerPage = require('../pages/register');
 
 describe('How to do it in JS applicarion', function() {
 
@@ -7,13 +7,14 @@ describe('How to do it in JS applicarion', function() {
 		homePage.get();
 	});
 
-	it('should have How to do it in JavaScript title on home page', function(){
-		expect(homePage.getTitle()).toEqual("How to do it in JavaScript");
+	it('should have correct link to Registration page', function(){
+		homePage.clickRegisterButton();
+		expect(registerPage.getTitle()).toEqual("Strefa uczestnika Agile & Automation Days 2015");
+
 	});
 
-	it('should have correct link to Lesson 1 page', function(){
-		homePage.clickOnLesson1();
-		expect(lesson1Page.getTitle()).toEqual("How to do it in JavaScript - Lesson 1");
+	xit('should have correct link to Event page', function(){
+
 	});
 
 });

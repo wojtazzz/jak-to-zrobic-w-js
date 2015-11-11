@@ -1,17 +1,17 @@
 var HomePage = function() {
 
-  this.navBrand = element(by.css('.navbar-brand'));
+  this.registerButton = element(by.css('a.btn-big'));
 
   this.get = function() {
-    browser.driver.get('http://localhost:8888');
+    browser.driver.get('http://aadays.pl/');
   };
 
   this.getTitle = function() {
     return browser.driver.getTitle();
   };
 
-  this.getNavBrandText = function() {
-    return this.navBrand.getText();
+  this.clickRegisterButton = function() {
+    this.registerButton.click();
   };
 
 };

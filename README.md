@@ -6,7 +6,8 @@ Agile & Automation Days.
 
 ## Przygotowanie do warsztatów
 1. Pobierz wymagane narzędzia
-  * Pobierz i zainstaluj [Node.js](https://nodejs.org/)
+  * Zainstaluj przeglądarkę Firefox
+  * Zainstaluj [Node.js](https://nodejs.org/)
   * Pobierz zawartość repozytorium. Jeśli korzystasz z narzędzia [Git](https://git-scm.com/downloads) sklonuj repozytorium, jeśli nie, naciśnij przycisk `Download ZIP` i rozpakuj pobrane archiwum.
   * Wejdź do katalogu `jak-to-zrobic-w-js` i zainstaluj pakiet Gulp poleceniem:
 
@@ -16,9 +17,7 @@ Agile & Automation Days.
 
     `npm install`
 2. Sprawdź poprawność instalacji
-  * Uruchom serwer z przykładową aplikacją wydając polecenie:
-
-    `gulp webserver`
+  *
   * Wystartuj przykładowy test poleceniem
 
     `gulp test-minimal`
