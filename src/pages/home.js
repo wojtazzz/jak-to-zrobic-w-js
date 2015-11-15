@@ -1,6 +1,7 @@
 var HomePage = function() {
 
   this.registerButton = element(by.css('a.btn-big'));
+  this.pageSections = element.all(by.css('div.frontpage-block-wrap > h3'));
 
   this.get = function() {
     browser.driver.get('http://aadays.pl/');
@@ -13,6 +14,10 @@ var HomePage = function() {
   this.clickRegisterButton = function() {
     this.registerButton.click();
   };
+
+  this.getPageSectionHeaderByIdx = function(idx){
+    return this.pageSections.get(idx).getText()
+  }
 
 };
 

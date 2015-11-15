@@ -1,6 +1,6 @@
-//var homePage = require('../pages/home');
 var homePage = require(browser.__pagesDir + '/home.complete');
-var lesson1Page = require(browser.__pagesDir + '/lesson1');
+
+var speakers = require(browser.__dataDir + '/speakers.json');
 
 describe('How to do it in JS homepage', function() {
 
@@ -8,24 +8,18 @@ describe('How to do it in JS homepage', function() {
 		homePage.get();
 	});
 
-	it('should have How to do it in JavaScript title', function(){
-		expect(homePage.getTitle()).toEqual("How to do it in JavaScript");
+	it('should haveAgile & Automation Days | Konferencja i Warsztaty title', function(){
+		expect(homePage.getTitle()).toEqual("Agile & Automation Days | Konferencja i Warsztaty");
 	});
 
-	it('should contain How to do it in JavaScript text in nav brand section', function(){
-		expect(homePage.getNavBrandText()).toEqual("How to do it in JavaScript");
-	});
-
-	it('should have correct link to Lesson 1 page', function(){
-		homePage.menu.clickOnLink('Lesson 1');
-		expect(lesson1Page.getTitle()).toEqual("How to do it in JavaScript - Lesson 1");
-	});
-
-	it('should contain correct links in the menu', function(){
-		expect(homePage.menu.getMenuLinksText()).toEqual(	[
-		  {index: 0, text: 'Lesson 1', class: ''},
-		  {index: 1, text: 'Lesson 2', class: ''}
-		]);
+	it('should contain correct speakers', function(){
+		homePage.scrolltoSperakersSection();
+		homePage.takeScreenshot("screen-1");
+		homePage.scrollPageDown();
+		homePage.takeScreenshot("screen-2");
+		homePage.scrollPageDown();
+		homePage.takeScreenshot("screen-3");
+		expect(homePage.getSpeakers()).toEqual(speakers.data);
 	});
 
 });

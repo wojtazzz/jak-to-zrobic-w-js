@@ -24,7 +24,7 @@ describe('Agile & Automation Days homepage', function() {
 	 * to see how map function can be used to verify content of multiple elements
 	 */
 	xit('should have footer with correct elements',function(){
-		var footer = element(by.css('ul.footer-menu')).all(by.css('li'));
+		var footer = element(by.css('ul.footer-menu')).all(by.tagName('a'));
 	});
 
 	/**

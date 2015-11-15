@@ -33,3 +33,5 @@ Agile & Automation Days.
 * [Protractor - strona domowa](https://angular.github.io/protractor/#/)
 * [Protractor API](https://angular.github.io/protractor/#/api)
 * [Jasmine](http://jasmine.github.io/2.3/introduction.html)
+* [Using the map() function to transform collections](https://www.youtube.com/watch?v=646Xw2qFqJU)
+* [Using reduce() and reduceRight() functions](https://www.youtube.com/watch?v=CQdaGcxQhSE)

@@ -69,10 +69,36 @@
       }
   };
 
-  Page.prototype.takeScreenshot = function (name) {
-        browser.driver.takeScreenshot().then(function (png) {
-            new Screenshot(png, name + ".png");
+  Page.prototype.scrollToElement = function(el){
+    var windowHeight;
+    browser.driver.manage().window().getSize()
+        .then(function (windowSize) {
+            windowHeight = windowSize.height;
+            return el.getWebElement().getLocation();
+        })
+        .then(function (location) {
+            return browser.executeScript('window.scrollTo(0, ' + (location.y - Math.floor(windowHeight / 2)) +');');
         });
+        return browser.sleep(3000);
+  };
+
+  Page.prototype.scrollPageDown = function(){
+    browser.driver.manage().window().getSize()
+        .then(function () {
+          return browser.executeScript(' return document.documentElement.scrollTop');
+        })
+        .then(function (location) {
+            return browser.executeScript('window.scrollTo(0, (document.documentElement.scrollTop + screen.height ) )');
+        });
+    return browser.sleep(3000);
+  };
+
+
+  Page.prototype.takeScreenshot = function (name) {
+      this.log("Creating screenshot: " + name);
+      browser.driver.takeScreenshot().then(function (png) {
+          new Screenshot(png, name + ".png");
+      });
   };
 
   module.exports = Page;

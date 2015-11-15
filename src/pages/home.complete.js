@@ -12,9 +12,9 @@ var HomePage = function() {
    */
   var self = this;
 
-  this.navBrand = element(by.css('.navbar-brand'));
+  this.speakers = element.all(by.css('figcaption'));
 
-  this.menu = require('../modules/menu');
+  this.footer = require('../modules/footer');
 
   this.get = function() {
     this.load('/');
@@ -25,10 +25,32 @@ var HomePage = function() {
     return browser.driver.getTitle();
   };
 
-  this.getNavBrandText = function() {
-    return this.navBrand.getText();
+  this.clickRegisterButton = function() {
+    this.registerButton.click();
   };
 
+  this.getSpeakers = function(){
+    return this.speakers.map(function(elm, index) {
+      return {
+        index: index,
+        name: elm.element(by.css('a')).getText()
+      };
+    });
+  };
+
+  this.getSpeakerByIdx = function(idx){
+    return this.speakers.get(0).element(by.css('a')).getText();
+  };
+
+  this.scrolltoLocationSection = function() {
+    var sectionPlace = element(by.xpath('//h3[contains(text(),"Miejsce")]'));
+    this.scrollToElement(sectionPlace)
+  };
+
+  this.scrolltoSperakersSection = function() {
+    var sectionPlace = element(by.xpath('//h3[contains(text(),"Mówcy")]'));
+    this.scrollToElement(sectionPlace);
+  };
 };
 
 HomePage.prototype = Object.create(Page.prototype);

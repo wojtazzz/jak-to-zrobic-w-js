@@ -40,12 +40,13 @@ exports.config = {
       }));
 
       browser.ignoreSynchronization = true;
-      browser.baseUrl = 'http://localhost:8888';
+      browser.baseUrl = 'http://aadays.pl';
 
       // Reference to directories used in requires within source files
       browser.__dataDir = __dirname + '/../data/',
       browser.__pagesDir = __dirname + '/../src/pages/',
       browser.__srcDir = __dirname + '/../src/',
+      browser.__scrDir = __dirname + '/../results/additional-screenshots',
 
       browser.driver.manage().window().maximize();
 
@@ -59,7 +60,7 @@ exports.config = {
       includeStackTrace: true,
       // This line removes the default Protractor 'dot' test result reporter
       // Comment out if you want to see stack traces in case of errors
-     print: function () {}
+      //print: function () {}
   }
 
 };

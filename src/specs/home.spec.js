@@ -1,5 +1,5 @@
-//var homePage = require('../pages/home');
-var homePage = require('../pages/home.example');
+var homePage = require('../pages/home');
+//var homePage = require('../pages/home.example');
 
 describe('How to do it in JS homepage', function() {
 
@@ -7,15 +7,15 @@ describe('How to do it in JS homepage', function() {
 		homePage.get();
 	});
 
-	it('should have How to do it in JavaScript title', function(){
-		expect(homePage.getTitle()).toEqual("How to do it in JavaScript");
+	it('should haveAgile & Automation Days | Konferencja i Warsztaty title', function(){
+		expect(homePage.getTitle()).toEqual("Agile & Automation Days | Konferencja i Warsztaty");
 	});
 
-	it('should contain How to do it in JavaScript text in nav brand section', function(){
-		expect(homePage.getNavBrandText()).toEqual("How to do it in JavaScript");
+	it('should have AGENDA section', function(){
+		expect(homePage.getPageSectionHeaderByIdx(0)).toEqual("AGENDA");
 	});
 
-	xit('should contain correct links in the menu', function(){
+	xit('should contain correct links in the footer', function(){
 	});
 
 });

@@ -1,3 +1,23 @@
+ [ { index : 0, name : 'JANET GREGORY
+AGILE TESTING COACH' }, { index : 1, name : 'ALAN „THE EVIL TESTER” RICHARDSON
+TEST CONSULTANT' }, { index : 2, name : 'GOJKO ADZIC
+STRATEGIC SOFTWARE DELIVERY CONSULTANT' }, { index : 3, name : 'MATEUSZ OLEJARKA
+STARSZY SPECJALISTA DS. BEZPIECZEŃSTWA IT' }, { index : 4, name : 'JACEK OKROJEK
+CHIEF SOFTWARE ENGINEER' }, { index : 5, name : 'WIKTOR ŻOŁNOWSKI
+TRENER, COACH, KONSULTANT' }, { index : 6, name : 'HANS PLANKEN' }, { index : 7, name : 'SEBASTIAN MYSZAK
+DEVOPS MANAGER' }, { index : 8, name : 'TOMASZ BONIOR
+QUALITY ASSURANCE LEADER' }, { index : 9, name : 'MARCIN MAJCHERKIEWICZ
+TEAM LEADER' }, { index : 10, name : 'ŁUKASZ JASIŃSKI
+SENIOR QA ENGINEER' }, { index : 11, name : 'BARTŁOMIEJ BUGAJNY
+SENIOR QUALITY ENGINEER' }, { index : 12, name : 'DOMINIK BARAN
+TEAM LEADER SENIOR QUALITY ENGINEER' }, { index : 13, name : 'RADOSŁAW ORSZEWSKI
+LIDER PROJEKTÓW' }, { index : 14, name : 'DANIEL DEC
+SOFTWARE QUALITY ENGINEER' }, { index : 15, name : 'TOMASZ WIERZCHOWSKI
+SENIOR SOFTWARE QA ENGINEER' }, { index : 16, name : 'KAMILA KUPIDURA
+LEAD QUALITY ASSURANCE' }, { index : 17, name : 'RADOSŁAW SMILGIN
+TRENER I KONSULTANT' } ]
+
+
 var Screenshot = require('../util/screenshots.js');
 describe('How to do it in JS homepage', function() {
 	xit('should have How to do it in JavaScript title', function(){

@@ -1,4 +1,4 @@
-var Page = require('./page.js');
+var Page = require('./page.example.js');
 
 var HomePage = function() {
 
@@ -12,22 +12,24 @@ var HomePage = function() {
    */
   var self = this;
 
-  this.navBrand = element(by.css('.navbar-brand'));
-
-  this.menu = require('../modules/menu');
+  this.registerButton = element(by.css('a.btn-big'));
+  this.pageSections = element.all(by.css('div.frontpage-block-wrap > h3'));
 
   this.get = function() {
-    this.load('http://localhost:8888');
-    this.logNavigationTiming();
+    browser.driver.get('http://aadays.pl/');
   };
 
   this.getTitle = function() {
     return browser.driver.getTitle();
   };
 
-  this.getNavBrandText = function() {
-    return this.navBrand.getText();
+  this.clickRegisterButton = function() {
+    this.registerButton.click();
   };
+
+  this.getPageSectionHeaderByIdx = function(idx){
+    return this.pageSections.get(idx).getText()
+  }
 
 };
 
