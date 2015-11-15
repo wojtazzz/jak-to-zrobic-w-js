@@ -1,4 +1,3 @@
-**Uwage:** Materiał w trakcie przygotowania - pamiętaj aby zajrzeć tu na dzień przed szkoleniem!
 # Jak to zrobić w JavaScript
 
 Przykłady i ćwiczenia prezentowane w ramach mini warsztatów na konferencji
@@ -25,6 +24,8 @@ Agile & Automation Days.
 
 **Uwaga:** W przypadku problemów w środowisku Windows zapoznaj się z postem [Nodejs cannot find installed module on Windows](http://stackoverflow.com/questions/9587665/nodejs-cannot-find-installed-module-on-windows/). Jeśli ciągle będziesz miał problem zgłoś go w zakładce `Issues`. Postaram się pomóc.
 
+## Prezentacja
+[Jak to zrobić w JavaScript](http://www.slideshare.net/jacekokrojek/aadays-2015-jak-to-zrobic-w-javascript)
 
 ## Przydatne materiały
 * Jeśli nie programowałeś do tej pory ten kurs powinien pomóc [Learn JavaScript](https://www.codecademy.com/tracks/javascript)

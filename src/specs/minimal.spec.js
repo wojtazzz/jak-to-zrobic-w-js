@@ -4,7 +4,7 @@ describe('Agile & Automation Days homepage', function() {
 	//
 	// });
 
-	it('should have Agile & Automation Days | Konferencja i Warsztaty title', function(){
+	xit('should have Agile & Automation Days | Konferencja i Warsztaty title', function(){
 		browser.driver.get('http://aadays.pl/');
     var pageTitle = browser.driver.getTitle();
 		expect(pageTitle).toEqual("Agile & Automation Days | Konferencja i Warsztaty");
@@ -14,9 +14,17 @@ describe('Agile & Automation Days homepage', function() {
 	 * Check http://angular.github.io/protractor/#/api?view=ElementFinder
 	 * to see how to select element for verification
 	 */
-	xit('should have Agenda section', function(){
+	it('should have Agenda section', function(){
+		browser.driver.get('http://aadays.pl/');
 		var agendaHeader = element(by.xpath('//h3[contains(text(),"Agenda")]'));
 		expect(agendaHeader.isPresent()).toEqual(true);
+	});
+
+	xit('should change to "Strefa uczestnika" when user clicks "Rejestracja" button', function(){
+	});
+
+	xit('should have "Powered by 21CN" text in the copyright section', function(){
+		var copyrightText = 'Powered by\n21CN';
 	});
 
 	/**
