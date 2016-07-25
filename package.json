@@ -21,16 +21,17 @@
     "gulp-jscs": "^2.0.0",
     "gulp-jscs-stylish": "^1.1.2",
     "gulp-jshint": "^1.11.2",
-    "gulp-protractor": "^1.0.0",
+    "gulp-protractor": "^2.4.0",
     "jasmine": "^2.3.2",
     "jasmine-reporters": "^2.0.7",
-    "jasmine-spec-reporter": "^1.2.0",
+    "jasmine-spec-reporter": "^2.5.0",
     "jasmine2-custom-message": "^0.8.0",
+    "protractor-jasmine2-html-reporter": "0.0.6",
     "jshint-stylish": "^2.0.1",
     "mkdirp": "^0.5.1",
-    "protractor": "^2.1.0",
+    "protractor": "^3.3.0",
     "q": "^1.4.1",
     "run-sequence": "^1.1.2",
-    "selenium-server-standalone-jar": "^2.45.0"
+    "selenium-server-standalone-jar": "^2.53.0"
   }
 }

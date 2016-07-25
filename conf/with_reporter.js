@@ -20,13 +20,13 @@ exports.config = {
     /// MINIMAL CONFIGURATION END /////////////////////////////////////////////////////
 
     capabilities: {
-        'browserName' : 'firefox',
+        'browserName' : 'chrome',
     },
-//    framework: 'jasmine2',
+    //    framework: 'jasmine2',
     onPrepare: function () {
       var jasmineReporters = require('jasmine-reporters'),
           SpecReporter = require('jasmine-spec-reporter'),
-          HtmlReporter = require('protractor-html-screenshot-reporter');
+          Jasmine2HtmlReporter = require('protractor-jasmine2-html-reporter');
 
       // jasmine.getEnv().addReporter(new jasmineReporters.JUnitXmlReporter({
       //         consolidateAll: true,
@@ -39,9 +39,9 @@ exports.config = {
         displayStacktrace: true
       }));
 
-      jasmine.getEnv().addReporter( new HtmlReporter({
-         baseDirectory: 'results/html'
-      }));
+      // jasmine.getEnv().addReporter( new Jasmine2HtmlReporter({}));
+
+      browser.ignoreSynchronization = true;
   },
 
   jasmineNodeOpts: {

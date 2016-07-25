@@ -23,21 +23,17 @@ exports.config = {
     /// MINIMAL CONFIGURATION END /////////////////////////////////////////////////////
 
     capabilities: {
-        'browserName' : 'firefox',
+        'browserName' : 'chrome',
     },
     onPrepare: function () {
       var jasmineReporters = require('jasmine-reporters'),
           SpecReporter = require('jasmine-spec-reporter'),
-          HtmlReporter = require('protractor-html-screenshot-reporter');
 
       // add jasmine spec reporter
       jasmine.getEnv().addReporter(new SpecReporter({
         displayStacktrace: true
       }));
 
-      jasmine.getEnv().addReporter( new HtmlReporter({
-         baseDirectory: 'results/html'
-      }));
 
       browser.ignoreSynchronization = true;
       browser.baseUrl = 'http://aadays.pl';

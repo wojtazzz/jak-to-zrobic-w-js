@@ -18,7 +18,7 @@ exports.config = {
     specs: ['../src/specs/minimal.spec.js'],
 
     capabilities: {
-      'browserName' : 'firefox',
+      'browserName' : 'chrome',
     },
 
     /// MINIMAL CONFIGURATION END /////////////////////////////////////////////////////

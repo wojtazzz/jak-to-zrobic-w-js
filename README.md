@@ -5,21 +5,20 @@ Agile & Automation Days.
 
 ## Przygotowanie do warsztatów
 1. Pobierz wymagane narzędzia
-  * Zainstaluj przeglądarkę Firefox
+  * Zainstaluj przeglądarkę Chrome
   * Zainstaluj [Node.js](https://nodejs.org/)
   * Pobierz zawartość repozytorium. Jeśli korzystasz z narzędzia [Git](https://git-scm.com/downloads) sklonuj repozytorium, jeśli nie, naciśnij przycisk `Download ZIP` i rozpakuj pobrane archiwum.
-  * Wejdź do katalogu `jak-to-zrobic-w-js` i zainstaluj pakiet Gulp poleceniem:
-
-    `npm install -g gulp`
 
   * Zainstaluj pozostałe pakiety
 
     `npm install`
-2. Sprawdź poprawność instalacji
-  *
+  * Zainstaluj narzędzie protractor 
+
+	`npm install -g protractor`
+2. Sprawdź poprawność instalacji  
   * Wystartuj przykładowy test poleceniem
 
-    `gulp test-minimal`
+    `protractor conf\minimal.js`
 3. Jeśli nie masz swojego ulubionego edytora JavaScript zainstaluj [Atom](https://atom.io/)
 
 **Uwaga:** W przypadku problemów w środowisku Windows zapoznaj się z postem [Nodejs cannot find installed module on Windows](http://stackoverflow.com/questions/9587665/nodejs-cannot-find-installed-module-on-windows/). Jeśli ciągle będziesz miał problem zgłoś go w zakładce `Issues`. Postaram się pomóc.

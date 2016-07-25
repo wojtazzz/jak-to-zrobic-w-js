@@ -31,7 +31,7 @@ describe('Agile & Automation Days homepage', function() {
 	 * Check http://angular.github.io/protractor/#/api?view=ElementArrayFinder
 	 * to see how map function can be used to verify content of multiple elements
 	 */
-	xit('should have footer with correct elements',function(){
+	xit('should have footer with links to "O wydarzeniu", "Aktualności", "Cennik" and "Kontakt" pages',function(){
 		var footer = element(by.css('ul.footer-menu')).all(by.tagName('a'));
 	});
 
@@ -39,7 +39,7 @@ describe('Agile & Automation Days homepage', function() {
 	 * Check http://angular.github.io/protractor/#/api?view=ElementArrayFinder
 	 * to see how fileter function can be used select elements based on condition
 	 */
-	xit('should have correct sections', function(){
+	xit('should have correct sections ...', function(){
 		var headers = element.all(by.xpath('//h3'));
 	});
 

@@ -1,5 +1,4 @@
 var homePage = require(browser.__pagesDir + '/home.complete');
-
 var speakers = require(browser.__dataDir + '/speakers.json');
 
 describe('How to do it in JS homepage', function() {
