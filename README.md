@@ -15,6 +15,11 @@ Agile & Automation Days.
   * Zainstaluj narzędzie protractor 
 
 	`npm install -g protractor`
+
+  * Zaktualizuj drivery
+
+	`webdriver-manager update`
+
 2. Sprawdź poprawność instalacji  
   * Wystartuj przykładowy test poleceniem
 
