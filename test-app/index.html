@@ -1,200 +1,250 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>How to do it in JavaScript</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+  <head>
+    <meta charset="utf-8">
+    <title>Protractor workshop | Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet"> 
+    
+    <!--Font-->
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600' rel='stylesheet' type='text/css'>
+    
+    
+    
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+      
+      <!-- Fav and touch icons -->
+      <link rel="shortcut icon" href="ico/favicon.ico">
+      <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
 
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
 
-  <link rel="stylesheet" type="text/css" href="how-to-do-it-js.css">
-</head>
+      
 
-<body class="swag-line">
-  <div class="container-overflow-wrap">
+    <!-- SCRIPT 
+    ============================================================-->  
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+      
+      
+  </head>
+  <body>
+  <!--HEADER ROW-->
+  <div id="header-row">
     <div class="container">
-      <nav role="navigation" class="navbar navbar-default navbar-tall navbar-full">
-    <div class="navbar-header">
-      <button data-target="#global-nav" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a href="/" class="navbar-brand">How to do it in JavaScript</a>
-    </div>
+      <div class="row">
+              <!--LOGO-->
+              <div class="span3"><a class="brand" href="#"><img src="img/logo.png"/></a></div>
+              <!-- /LOGO -->
 
-    <div id="global-nav" class="collapse navbar-collapse">
-      <div class="navbar-right">
-        <ul class="nav navbar-nav">
+            <!-- MAIN NAVIGATION -->  
+              <div class="span9">
+                <div class="navbar  pull-right">
+                  <div class="navbar-inner">
+                    <a data-target=".navbar-responsive-collapse" data-toggle="collapse" class="btn btn-navbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a>
+                    <div class="nav-collapse collapse navbar-responsive-collapse">
+                    <ul class="nav">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        
+                        <li class="dropdown">
+                          <a href="about.html" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                  <li><a href="about.html">Company</a></li>
+                                  <li><a href="about.html">History</a></li>
+                                  <li><a href="about.html">Team</a></li>
+                            </ul>
 
-            <li>
-              <a href="/pages/lesson1.html">Lesson 1</a>
-            </li>
+                        </li>
 
-            <li>
-              <a href="/pages/about-us">Lesson 2</a>
-            </li>
+                        <li><a href="service.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                 
+                    </ul>
+                  </div>
 
-        </ul>
+                  </div>
+                </div>
+              </div>
+            <!-- MAIN NAVIGATION -->  
       </div>
     </div>
-  </nav>
+  </div>
+  <!-- /HEADER ROW -->
+
+  
 
 
+  <div class="container">
 
-  <div class="hidden-xs">
-    <div class="row row-padded row-bordered">
-      <div class="col-sm-8 col-sm-offset-2 text-center">
-        <h2 class="m-b-md">"Each Bootstrap theme provides a comprehensive set of tools that's super easy to get up and running&mdash;it gives you a huge leg up when starting a project"</h2>
-        <h5 class="text-muted">Katie Zhu, Product Engineer at Medium</h5>
-      </div>
-    </div>
+  <!--Carousel
+  ==================================================-->
 
-    <div class="row row-padded homepage-grid row-bordered p-t text-center">
-      <div class="col-sm-4">
-        <span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span>
-        <h5><strong>Components and examples</strong></h5>
-        <p class="text-muted">Each theme features new components built to the same level of quality as Bootstrap and highlighted with several example pages.</p>
-      </div>
+  <div id="myCarousel" class="carousel slide">
+    <div class="carousel-inner">
 
-      <div class="col-sm-4">
-        <span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span>
-        <h5><strong>Tons of variables</strong></h5>
-        <p class="text-muted">Theme components inherit much of their style from variables, exactly like Bootstrap. Change a few values and the theme adapts.</p>
-      </div>
+      <div class="active item">
+        <div class="container">
+          <div class="row">
+            
+              <div class="span6">
 
-      <div class="col-sm-4">
-        <span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span>
-        <h5><strong>Source files and tools</strong></h5>
-        <p class="text-muted">Each Bootstrap theme includes all the source and compiled files you'll need, including npm and Gulp based build tools.</p>
-      </div>
-    </div>
+                <div class="carousel-caption">
+                      <h1>Example headline 1</h1>
+                      <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                      <a class="btn btn-large btn-primary" href="#">Sign up today</a>
+                </div>
 
-    <div class="row row-padded row-bordered row-centered">
-      <div class="col-sm-12">
-        <div class="row m-b-lg">
-          <div class="col-sm-8 col-sm-offset-2 text-center">
-            <h3><strong>From industry leaders</strong></h3>
-            <h4 class="m-b-lg">Bootstrap Themes are built by the folks who not only brought you frameworks like <a target="_blank" href="getbootstrap.com">Bootstrap</a>, <a target="_blank" href="http://getskeleton.com/">Skeleton</a>, and <a target="_blank" href="http://goratchet.com/">Ratchet</a>, but have years of experience at innovative companies like Twitter, GitHub, Medium, and others.</h4>
+              </div>
+
+                <div class="span6"> <img src="img/slide/slide1.jpg"></div>
+
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-4 m-b-lg">
-            <div class="panel panel-default panel-profile m-b-0">
-              <div class="panel-heading"></div>
-              <div class="panel-body text-center">
+       
 
-                <h5 class="panel-title">Jacob Thornton</h5>
-                <p class="m-b">Star trek flow so they klingon me. I wrote this here code. Two times.</p>
-                <a class="btn btn-primary-outline btn-sm m-b" target="_blank" href="//github.com/fat">
-                  <span class="icon icon-add-user"></span> View GitHub
-                </a>
+
+
+      </div>
+
+      <div class="item">
+       
+        <div class="container">
+          <div class="row">
+            
+              <div class="span6">
+
+                <div class="carousel-caption">
+                      <h1>Example headline 2</h1>
+                      <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                      <a class="btn btn-large btn-primary" href="#">Sign up today</a>
+                </div>
+
               </div>
-            </div>
-          </div>
-          <div class="col-md-4 m-b-lg">
-            <div class="panel panel-default panel-profile m-b-0">
-              <div class="panel-heading"></div>
-              <div class="panel-body text-center">
-                <h5 class="panel-title">Mark Otto</h5>
-                <p class="m-b">Design at GitHub. Creator of Bootstrap. Previously at Twitter. Huge nerd.</p>
-                <a class="btn btn-primary-outline btn-sm m-b" target="_blank" href="//github.com/mdo">
-                  <span class="icon icon-add-user"></span> View GitHub
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 m-b-lg">
-            <div class="panel panel-default panel-profile m-b-0">
-              <div class="panel-heading"></div>
-              <div class="panel-body text-center">
-                <h5 class="panel-title">Dave Gamache</h5>
-                <p class="m-b">Burritos are my spirit animal. Previously Twitter and Medium.</p>
-                <a class="btn btn-primary-outline btn-sm m-b" target="_blank" href="//github.com/dhg">
-                  <span class="icon icon-add-user"></span> View GitHub
-                </a>
-              </div>
-            </div>
+
+                <div class="span6"> <img src="img/slide/slide2.jpg"></div>
+
           </div>
         </div>
+
       </div>
+
+
+
+
+
     </div>
-
-    <div class="row row-padded row-bordered row-centered">
-      <div class="col-sm-6">
-        <div class="homepage-terminal-example">
-          <p class="m-b-md">
-            <span class="text-muted">&gt; $ npm install</span><br>
-            Everything installed!
-          </p>
-          <p class="m-b-md">
-            <span class="text-muted">&gt; $ npm start</span><br>
-            Server started http://localhost:9001<br>
-            LiveReload started<br>
-            Opening http://localhost:9001/docs/
-          </p>
-          <p>
-            <span class="text-muted">&gt; $ is that it?</span><br>
-            Yup, it's that simple.
-          </p>
-        </div>
-      </div>
-      <div class="col-sm-5 col-sm-offset-1">
-        <h3><strong>With stellar documentation</strong></h3>
-        <h4 class="m-b-md">We work hard to make sure every new component and plugin is thoroughly documented with live examples and code blocks for easier use and customization&mdash;just like Bootstrap itself.</h4>
-        <a href="http://bootstrap-themes.github.io/dashboard/docs/" target="_blank" class="btn btn-primary">Explore the Dashboard docs</a>
-      </div>
-    </div>
-
-
-  <footer class="footer clearfix">
-
-      <ul class="footer-social-buttons">
-        <li class="btn-follow hidden-xs">
-          <iframe data-screen-name="getbootstrap" src="http://platform.twitter.com/widgets/follow_button.450bd5fbaeab74caf9d49a3141d20693.en.html#_=1445719250359&amp;dnt=true&amp;id=twitter-widget-0&amp;lang=en&amp;screen_name=getbootstrap&amp;show_count=true&amp;show_screen_name=true&amp;size=m" title="Twitter Follow Button" style="position: static; visibility: visible; width: 233px; height: 20px;" class="twitter-follow-button twitter-follow-button-rendered" allowtransparency="true" scrolling="no" id="twitter-widget-0" frameborder="0"></iframe>
-        </li>
-        <li class="btn-tweet">
-          <iframe data-url="http://themes.getbootstrap.com/" src="http://platform.twitter.com/widgets/tweet_button.a428ab2e859e8008e0df5404770eb017.en.html#_=1445719250378&amp;count=horizontal&amp;dnt=true&amp;id=twitter-widget-1&amp;lang=en&amp;original_referer=http%3A%2F%2Fthemes.getbootstrap.com%2F&amp;related=getbootstrap%2Cmdo%2Cfat%2Cdhg&amp;size=m&amp;text=Bootstrap%20Themes&amp;type=share&amp;url=http%3A%2F%2Fthemes.getbootstrap.com%2F&amp;via=getbootstrap" title="Twitter Tweet Button" style="position: static; visibility: visible; width: 98px; height: 20px;" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" allowtransparency="true" scrolling="no" id="twitter-widget-1" frameborder="0"></iframe>
-        </li>
-      </ul>
-
-      <p class="hidden-xs">
-        Designed and built with all the love in the world by
-        <a href="https://twitter.com/mdo" target="_blank">@mdo</a>,
-        <a href="https://twitter.com/fat" target="_blank">@fat</a>, and
-        <a href="https://twitter.com/dhg" target="_blank">@dhg</a>.
-      </p>
-
-      <ul class="footer-list">
-
-          <li class="footer-list-item">
-            <a class="footer-list-link" href="/pages/about-us">About</a>
-          </li>
-
-          <li class="footer-list-item">
-            <a class="footer-list-link" href="/pages/terms-of-service">Terms</a>
-          </li>
-
-          <li class="footer-list-item">
-            <a class="footer-list-link" href="/pages/privacy-policy">Privacy</a>
-          </li>
-
-          <li class="footer-list-item">
-            <a class="footer-list-link" href="/pages/our-license">Licenses</a>
-          </li>
-
-          <li class="footer-list-item">
-            <a class="footer-list-link" href="/pages/faq">FAQ</a>
-          </li>
-
-          <li class="footer-list-item">
-            <a class="footer-list-link" href="http://getbootstrap.com">Bootstrap</a>
-          </li>
-
-      </ul>
+       <!-- Carousel nav -->
+      <a class="carousel-control left " href="#myCarousel" data-slide="prev"><i class="icon-chevron-left"></i></a>
+      <a class="carousel-control right" href="#myCarousel" data-slide="next"><i class="icon-chevron-right"></i></a>
+        <!-- /.Carousel nav -->
 
   </div>
-  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
-</body>
+    <!-- /Carousel -->
+
+
+
+<!-- Feature 
+  ==============================================-->
+
+
+  <div class="row feature-box">
+      <div class="span12 cnt-title">
+       <h1>At vero eos et accusamus et iusto odio dignissimos</h1> 
+        <span>Contrary to popular belief, Lorem Ipsum is not simply random text.</span>        
+      </div>
+
+      <div class="span4">
+        <img src="img/icon3.png">
+        <h2>Feature A</h2>
+        <p>
+            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+        </p>
+
+        <a href="#">Read More &rarr;</a>
+
+      </div>
+
+      <div class="span4">
+        <img src="img/icon2.png">
+        <h2>Feature B</h2>
+        <p>
+            Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+            aliqua. 
+        </p>   
+          <a href="#">Read More &rarr;</a>    
+      </div>
+
+      <div class="span4">
+        <img src="img/icon1.png">
+        <h2>Feature C</h2>
+        <p>
+            Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. 
+        </p>
+          <a href="#">Read More &rarr;</a>
+      </div>
+  </div>
+
+
+<!-- /.Feature -->
+
+  <div class="hr-divider"></div>
+
+<!-- Row View -->
+
+
+    <div class="row">
+        <div class="span6"><img src="img/responsive.png"></div>
+
+        <div class="span6">
+          <img class="hidden-phone" src="img/icon4.png" alt="">
+          <h1>Fully Responsive</h1>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+             <a href="#">Read More &rarr;</a>
+        </div>
+    </div>
+
+    
+</div>
+
+
+<!-- /.Row View -->
+
+
+
+<!--Footer
+==========================-->
+
+<footer>
+    <div class="container">
+      <div class="row">
+        <div class="span6">Copyright &copy 2013 Shapebootstrap | All Rights Reserved  <br>
+        <small>Aliquam tincidunt mauris eu risus.</small>
+        </div>
+        <div class="span6">
+            <div class="social pull-right">
+                <a href="#"><img src="img/social/googleplus.png" alt=""></a>
+                <a href="#"><img src="img/social/dribbble.png" alt=""></a>
+                <a href="#"><img src="img/social/twitter.png" alt=""></a>
+                <a href="#"><img src="img/social/dribbble.png" alt=""></a>
+                <a href="#"><img src="img/social/rss.png" alt=""></a>
+            </div>
+        </div>
+      </div>
+    </div>
+</footer>
+
+<!--/.Footer-->
+
+  </body>
 </html>
