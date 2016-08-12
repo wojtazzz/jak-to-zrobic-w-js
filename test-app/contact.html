@@ -189,7 +189,8 @@ Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante so
     </div>
 </footer>
 <script>
-  $('.btn').click(function() {
+  $('.btn').click(function(e) {
+	  e.preventDefault();
       var empty = false;
       $(":text, :file, :checkbox, select, textarea").each(function() {
           if ($(this).val() === "") {

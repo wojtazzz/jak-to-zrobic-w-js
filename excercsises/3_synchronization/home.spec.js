@@ -10,14 +10,18 @@ describe('Protractor Workshop app', function() {
 		expect(homePage.getTitle()).toEqual("Protractor workshop | Home");
 	});
 
-	it('should display drop down after clicking on About menu item', function(){
+	it('should have "Example headline 2" carousel item after clicking on next arrow', function(){
+		var expectedHeader = 'Example Headline 2'
+		var activeCarouselHeader = element(by.css('div.active h1'));
+		var nextButton = element(by.css('a.right'));
+		nextButton.click();
+		//Replace this agly code 
+		browse.sleep(1000);
+		expect(activeCarouselHeader.getText).toEqual(expectedHeader)
+	});
+	
+	xit('should display drop down after clicking on About menu item', function(){
 		
-		homePage.clickMenuAtIdx(1)
-		var EC = protractor.ExpectedConditions;
-		var dropDownMenuItems = element.all(by.css("ul.dropdown-menu li a"));
-		browser.wait(EC.elementToBeClickable(dropDownMenuItems.get(0)), 5000);
-		expect(dropDownMenuItems.get(0).getText()).toEqual("Company");
-
 	});
 
 });
