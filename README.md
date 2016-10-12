@@ -16,7 +16,11 @@ Agile & Automation Days.
   * Zainstaluj narzędzie protractor 
 
     `npm install -g protractor`
+    
+  * Zainstaluj narzędzie gulp 
 
+    `npm install -g gulp`
+    
   * Zaktualizuj drivery
 
     `webdriver-manager update`
