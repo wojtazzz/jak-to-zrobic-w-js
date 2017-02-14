@@ -15,30 +15,38 @@ Przykłady i ćwiczenia dla mini warsztatu testowania aplikacji z wykokrzystanie
   * Zainstaluj narzędzie protractor 
 
     `npm install -g protractor`
-    
-  * Zainstaluj narzędzie gulp 
-
-    `npm install -g gulp`
-    
-  * Zaktualizuj drivery
+       
+  * Zaktualizuj drivery przeglądarek
 
     `webdriver-manager update`
 
-2. Sprawdź poprawność instalacji  
-  * Wystartuj testową aplikację
-  
-    `gulp webserver`
+2. Wystartuj testową aplikację  ( do większości ćwiczeń możesz też bez konieczności instalacji korzystać z aplikacji dostępnej na stronie http://jacekokrojek.github.io/jak-to-zrobic-w-js/ )
+
+    `node app.js`
+
+3. Sprawdź poprawność instalacji  
     
   * W oddzielnym terminalu wystartuj przykładowy test poleceniem
 
     `protractor excercsises\1_introduction\conf.js`
-    
-3. Jeśli nie masz swojego ulubionego edytora JavaScript zainstaluj [Atom](https://atom.io/)
+
+4. Jeśli nie masz swojego ulubionego edytora JavaScript zainstaluj [Visual Studio Code](https://code.visualstudio.com/) lub [Atom](https://atom.io/)
 
 **Uwaga:** W przypadku problemów w środowisku Windows zapoznaj się z postem [Nodejs cannot find installed module on Windows](http://stackoverflow.com/questions/9587665/nodejs-cannot-find-installed-module-on-windows/). Jeśli ciągle będziesz miał problem zgłoś go w zakładce `Issues`. Postaram się pomóc.
 
 ## Prezentacja
 [Jak to zrobić w JavaScript](http://www.slideshare.net/jacekokrojek/aadays-2015-jak-to-zrobic-w-javascript)
+
+## API
+
+* GET /rest/prices/fb - pobieranie danych o cenach akcji
+* POST /rest/prices - dodawanie danych o cenach akcji. Dane należy przesłać w formacie { "code": <stock-code>, "date" : <data-in-format-YYYY-MM-DD>, "price" : <price> }. Przykład 
+
+`curl -d '{ "code": "fb", "date" : "2017-06-31", "price" : "20.00" }' -H "Content-Type: application/json" http://localhost:3000/rest/prices`
+
+## Dodatkowe informacje
+
+Serwis wykorzystuje baze danych SQLite i zapisuje dane do pliku "app.sqlite3". Skrypt "fetch\_fb\_data.js" pozwala pobrac najnowsze dane o cenach akcji i zapisac je do bazy.
 
 ## Przydatne materiały
 * Jeśli nie programowałeś do tej pory ten kurs powinien pomóc [Learn JavaScript](https://www.codecademy.com/tracks/javascript)
