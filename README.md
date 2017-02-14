@@ -12,21 +12,11 @@ Przykłady i ćwiczenia dla mini warsztatu testowania aplikacji z wykokrzystanie
 
     `npm install`
     
-  * Zainstaluj narzędzie protractor 
-
-    `npm install -g protractor`
-       
-  * Zaktualizuj drivery przeglądarek
-
-    `webdriver-manager update`
-
 2. Wystartuj testową aplikację  ( do większości ćwiczeń możesz też bez konieczności instalacji korzystać z aplikacji dostępnej na stronie http://jacekokrojek.github.io/jak-to-zrobic-w-js/ )
 
-    `node app.js`
+    `npm start`
 
-3. Sprawdź poprawność instalacji  
-    
-  * W oddzielnym terminalu wystartuj przykładowy test poleceniem
+3. Sprawdź poprawność instalacji startując w oddzielnym terminalu przykładowy test
 
     `protractor excercsises\1_introduction\conf.js`
 
