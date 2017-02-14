@@ -4,6 +4,7 @@
   "description": "",
   "license": "public",
   "private": false,
+  "main": "app/js",
   "scripts": {
     "test": "gulp test"
   },
@@ -33,5 +34,10 @@
     "q": "^1.4.1",
     "run-sequence": "^1.1.2",
     "selenium-server-standalone-jar": "^2.53.0"
+  },
+  "dependencies": {
+    "express": "^4.14.1",
+    "request": "^2.79.0",
+    "sqlite3": "^3.1.8"
   }
 }
