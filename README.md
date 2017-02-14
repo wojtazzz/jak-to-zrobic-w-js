@@ -1,7 +1,6 @@
 # Jak to zrobić w JavaScript
 
-Przykłady i ćwiczenia prezentowane w ramach mini warsztatów na konferencji
-Agile & Automation Days.
+Przykłady i ćwiczenia dla mini warsztatu testowania aplikacji z wykokrzystaniem JavaScript'u.
 
 ## Przygotowanie do warsztatów
 1. Pobierz wymagane narzędzia

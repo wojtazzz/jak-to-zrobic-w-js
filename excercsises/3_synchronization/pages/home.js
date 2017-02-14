@@ -3,7 +3,7 @@ var HomePage = function() {
   this.menuItems = element.all(by.css('ul.nav > li > a')); 
 
   this.get = function() {
-    browser.driver.get('http://localhost:8888/index.html');
+    browser.driver.get('http://jacekokrojek.github.io/jak-to-zrobic-w-js/');
   };
 
   this.getTitle = function() {

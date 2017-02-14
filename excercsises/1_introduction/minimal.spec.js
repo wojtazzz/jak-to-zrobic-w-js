@@ -5,7 +5,7 @@ describe('Protractor workshop app', function() {
 	// });
 
 	it('should have home page with title Protractor workshop | Home', function(){
-		browser.driver.get('http://localhost:8888/index.html');
+		browser.driver.get('http://jacekokrojek.github.io/jak-to-zrobic-w-js/');
 		var pageTitle = browser.driver.getTitle();
 		expect(pageTitle).toEqual("Protractor workshop | Home");
 	});

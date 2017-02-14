@@ -17,7 +17,7 @@ request({url: url, json : true} , function (error, response, body) {
             db.run("DROP TABLE IF EXISTS STOCK_PRICES");
             db.run("CREATE TABLE STOCK_PRICES (code TEXT, date TEXT, price TEXT)");
 
-            var stmt = db.prepare("INSERT INTO STOCK_PRICES VALUES ('FB',?,?)");
+            var stmt = db.prepare("INSERT INTO STOCK_PRICES VALUES ('fb',?,?)");
             for (var i in data) {
                 var time = data[i][0];
                 var price = data[i][1];
