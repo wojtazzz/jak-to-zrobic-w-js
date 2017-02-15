@@ -25,8 +25,6 @@
 	<link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57-precomposed.png">
 	<link rel="shortcut icon" href="img/favicon.png">
 
-
-
 	<!-- SCRIPT 
     ============================================================-->
 	<script src="http://code.jquery.com/jquery.js"></script>
@@ -36,7 +34,6 @@
 </head>
 
 <body>
-
 
 	<!--HEADER ROW-->
 	<div id="header-row">
@@ -83,11 +80,6 @@
 	</div>
 	<!-- /HEADER ROW -->
 
-
-
-
-
-
 	<div class="container">
 
 		<!--PAGE TITLE-->
@@ -108,7 +100,6 @@
 			<div class="span12">
 				<h2>Welcome to Fornax</h2>
 
-
 				<img class="pull-left" alt="" src="img/img2.png" />
 
 				<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
@@ -123,8 +114,6 @@
 				<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
 					nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
 				</p>
-
-
 
 			</div>
 		</div>
@@ -185,7 +174,7 @@
 			</div>
 		</div>
 
-		    <div class="hr-divider"></div>
+	    <div class="hr-divider"></div>
 
 		<div class="row">
 			<div class="span6">
@@ -223,7 +212,7 @@
 					var color = Chart.helpers.color;
 					var chartData;
 					$.ajax({
-						url: "http://localhost:3000/rest/prices/fb",
+						url: "http://localhost:3000/rest/prices/fb?sortOrder=desc",
 						method: 'GET',
 						dataType: 'json',
 						success: function (d) {
