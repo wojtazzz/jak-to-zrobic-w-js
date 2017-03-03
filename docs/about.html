@@ -212,7 +212,7 @@
 					var color = Chart.helpers.color;
 					var chartData;
 					$.ajax({
-						url: "/rest/prices/fb?sortOrder=desc",
+						url: "http://localhost:3000/rest/prices/fb?sortOrder=desc",
 						method: 'GET',
 						dataType: 'json',
 						success: function (d) {
