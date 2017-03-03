@@ -66,3 +66,4 @@ Serwis wykorzystuje baze danych SQLite i zapisuje dane do pliku "app.sqlite3". S
 * [Jasmine](http://jasmine.github.io/2.3/introduction.html)
 * [Using the map() function to transform collections](https://www.youtube.com/watch?v=646Xw2qFqJU)
 * [Using reduce() and reduceRight() functions](https://www.youtube.com/watch?v=CQdaGcxQhSE)
+
