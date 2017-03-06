@@ -45,7 +45,11 @@ app.use(bodyParser.json());
 app.post('/rest/prices', function (request, response) {
 
     var result = [];
-
+    
+    var contype = req.headers['content-type'];
+    if (!contype || contype.indexOf('application/json') !== 0){
+        result.push("Incorrect or missing content type ")
+    }   
     if (!request.body.code) {
         result.push("Missing stock code ")
     }
