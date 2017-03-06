@@ -46,7 +46,7 @@ app.post('/rest/prices', function (request, response) {
 
     var result = [];
     
-    var contype = req.headers['content-type'];
+    var contype = request.headers['content-type'];
     if (!contype || contype.indexOf('application/json') !== 0){
         result.push("Incorrect or missing content type ")
     }   
