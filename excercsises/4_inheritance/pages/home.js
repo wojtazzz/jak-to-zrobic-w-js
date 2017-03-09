@@ -12,8 +12,6 @@ var HomePage = function() {
    */
   var self = this;
 
-  var HomePage = function() {
-
   this.menuItems = element.all(by.css('ul.nav > li > a')); 
 
   this.get = function() {
