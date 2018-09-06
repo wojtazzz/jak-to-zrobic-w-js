@@ -1,6 +1,7 @@
 var clc = require('cli-color');
 
-var Page = function () {};
+var Page = function () { };
+
 
 /**
  * Sets logging mode
@@ -22,8 +23,8 @@ Page.prototype.load = function (url) {
  * Gets page title.
  * @returns A page title.
  */
-Page.prototype.getTitle = function() {
-	return browser.driver.getTitle();
+Page.prototype.getTitle = function () {
+    return browser.driver.getTitle();
 };
 
 Page.prototype.log = function (message) {

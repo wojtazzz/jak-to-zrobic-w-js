@@ -1,6 +1,6 @@
 var Page = require('./page.js');
 
-var HomePage = function() {
+var HomePage = function () {
 
   /**
    * Call super constructor.
@@ -12,45 +12,26 @@ var HomePage = function() {
    */
   var self = this;
 
-  this.speakers = element.all(by.css('figcaption'));
+  //this.footer = require('../modules/footer');
 
-  this.footer = require('../modules/footer');
-
-  this.get = function() {
+  this.get = function () {
     this.load('/');
     this.logNavigationTiming();
   };
 
-  this.getTitle = function() {
+  this.getTitle = function () {
     return browser.driver.getTitle();
   };
 
-  this.clickRegisterButton = function() {
+  this.clickRegisterButton = function () {
     this.registerButton.click();
   };
 
-  this.getSpeakers = function(){
-    return this.speakers.map(function(elm, index) {
-      return {
-        index: index,
-        name: elm.element(by.css('a')).getText()
-      };
-    });
-  };
-
-  this.getSpeakerByIdx = function(idx){
-    return this.speakers.get(0).element(by.css('a')).getText();
-  };
-
-  this.scrolltoLocationSection = function() {
-    var sectionPlace = element(by.xpath('//h3[contains(text(),"Miejsce")]'));
+  this.scrolltoLocationSection = function () { // At this moment, we don't need this function
+    var sectionPlace = element(by.xpath('//h3[contains(text(),"Place")]'));
     this.scrollToElement(sectionPlace)
   };
 
-  this.scrolltoSperakersSection = function() {
-    var sectionPlace = element(by.xpath('//h3[contains(text(),"Mówcy")]'));
-    this.scrollToElement(sectionPlace);
-  };
 };
 
 HomePage.prototype = Object.create(Page.prototype);

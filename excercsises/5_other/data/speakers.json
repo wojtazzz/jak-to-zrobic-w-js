@@ -1,17 +1,16 @@
-{ "data": [
-  { "index" : 0, "name" : "RICHARD BRADSHAW\nTESTER & CONSULTANT" },
-  { "index" : 1, "name" : "EWA BIELSKA\nTESTER APLIKACJI MOBILNYCH" },
-  { "index" : 2, "name" : "PIOTR WICHERSKI\nSENIOR SOFTWARE TEST ENGINEER" },
-  { "index" : 3, "name" : "ROBERT NYGA\nSENIOR QA ENGINEER" },
-  { "index" : 4, "name" : "KAMIL PYC\nIOS APPLICATION DEVELOPER" },
-  { "index" : 5, "name" : "KASJAN KOTYNIA\nANALITYK BIZNESOWY" },
-  { "index" : 6, "name" : "DOROTA STERNALSKA\nSENIOR SOFTWARE ENGINEER" },
-  { "index" : 7, "name" : "PRZEMYSLAW LIBUDZIC\nTESTER APLIKACJI NA IOS/ANDROID/W10M" },
-  { "index" : 8, "name" : "KAROLINA ZMITROWICZ\nFREELANCE IT CONSULTANT" },
-  { "index" : 9, "name" : "ADRIAN MUCHA\nSENIOR QUALITY ENGINEER" },
-  { "index" : 10, "name" : "ADAM MATLACZ\nAGILE COACH" },
-  { "index" : 11, "name" : "MAKSYMILIAN BAHR\nSENIOR QUALITY ENGINEER" },
-  { "index" : 12, "name" : "SEBASTIAN MALACA\nPROGRAMISTA" },
-  { "index" : 13, "name" : "BARTLOMIEJ BUGAJNY\nSENIOR QUALITY ENGINEER" },
-  { "index" : 14, "name" : "BARTOSZ SZULC\nQUALITY ASSISTANT" } ]
+{
+  "data": [
+    {
+      "index": 0,
+      "name": "DERRICK JEFFERSON / UI DESIGNER"
+    },
+    {
+      "index": 1,
+      "name": "ENJAMIN GARRETT / MARKETING"
+    },
+    {
+      "index": 2,
+      "name": "DASIA KATELYN / IOS DEVELOPER"
+    }
+  ]
 }

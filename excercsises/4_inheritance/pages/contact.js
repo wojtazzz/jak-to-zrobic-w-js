@@ -1,19 +1,22 @@
-var Contact = function() {
+var Page = require('./page');
 
-  this.menuItems = element.all(by.css('ul.nav > li > a')); 
+var Contact = function () {
 
-  this.get = function() {
-    browser.driver.get('contact.html');
+  Page.call(this);
+
+  this.menuItems = element.all(by.css('ul.nav > li > a'));
+
+  this.get = function () {
+    browser.driver.get('http://jacekokrojek.github.io/jak-to-zrobic-w-js/contact.html');
   };
 
-  this.getTitle = function() {
-    return browser.driver.getTitle();
-  };
-
-  this.clickMenuItemAt = function(idx) {
+  this.clickMenuItemAt = function (idx) {
     this.menuItems.get(idx).click();
   };
 
 };
+
+Contact.prototype = Object.create(Page.prototype);
+Contact.prototype.constructor = Contact;
 
 module.exports = new Contact();

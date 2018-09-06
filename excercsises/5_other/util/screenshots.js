@@ -1,8 +1,8 @@
-(function() {
+(function () {
 
   var fs = require('fs');
 
-  var Screenshot = function(data, filename) {
+  var Screenshot = function (data, filename) {
     this.screenshotPath = browser.__scrDir + '/';
     var stream = fs.createWriteStream(this.screenshotPath + filename);
 
