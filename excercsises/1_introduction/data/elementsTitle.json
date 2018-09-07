@@ -1,7 +1,0 @@
-{ "data": [
-  { "index" : 0, "name" : "Home" },
-  { "index" : 1, "name" : "About" },
-  { "index" : 2, "name" : "Services" },
-  { "index" : 3, "name" : "Blog" },
-  { "index" : 4, "name" : "Contact" } ]
-}

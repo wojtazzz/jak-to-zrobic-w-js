@@ -1,6 +1,7 @@
 # Logs
 logs
 *.log
+htmlReport.html
 
 # Runtime data
 pids
@@ -28,3 +29,8 @@ node_modules
 
 # Test results
 results/html
+
+# Screenshots
+*/Screenshots
+screenshots/
+

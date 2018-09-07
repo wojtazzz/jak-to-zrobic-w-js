@@ -14,13 +14,13 @@ var AboutPage = function () {
     return this.speakers.map(function (elm, index) {
       return {
         index: index,
-        name: elm.element(by.css('p')).getText()
+        name: elm.element(by.css('.caption > p:first-child')).getText()
       };
     });
   };
 
   this.getSpeakerByIdx = function (idx) {
-    return this.speakers.get(0).element(by.xpath('//div[@class="caption"]/p[1]')).getText();
+    return this.speakers.get(idx).element(by.xpath('//div[@class="caption"]/p[1]')).getText();
   };
 
   this.scrolltoSperakersSection = function () {
