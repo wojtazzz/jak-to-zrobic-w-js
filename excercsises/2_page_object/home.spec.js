@@ -14,7 +14,7 @@ describe('Protractor Workshop app', function () {
 		expect(homePage.getMenuTextAtIdx(4).getText()).toEqual("Contact");
 		homePage.clickMenuAtIdx(4)
 
-		expect(browser.getTitle()).toEqual("Protractor workshop | Contact us"); //"workshop" not "Workshop"
+		expect(homePage.getTitle()).toEqual("Protractor workshop | Contact us");
 	});
 
 

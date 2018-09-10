@@ -21,7 +21,7 @@ var Contact = function () {
     this.buttonSend.click();
   };
 
-  this.checkMessage = function () {
+  this.checkDisplayText = function () {
     expect(this.lastMessage.getText()).toEqual("Your message has been sent.");
   };
 };
