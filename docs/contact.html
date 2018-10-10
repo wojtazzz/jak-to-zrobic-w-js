@@ -198,8 +198,10 @@ Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante so
           }
       });
       if (!empty) {
-          $('span.span6 form').remove();
-          $('span.span6.message').append("<h3>Your message has been sent.</h3>");
+	      setTimeout( function(){
+		$('span.span6 form').remove();
+          	$('span.span6.message').append("<h3>Your message has been sent.</h3>");
+	      }, 5000);
       }
   });
 </script>
