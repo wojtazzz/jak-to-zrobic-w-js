@@ -63,7 +63,7 @@
       <div class="col-lg-12">
         <div ng-app="myApp">
           <div ng-controller="demoController as demo">
-            <h2 class="page-header">User list</h2>
+            <h2 class="page-header">Page stats</h2>
 
             <div class="form-inline" style="margin-bottom: 20px">
               <div class="form-group">
@@ -74,9 +74,10 @@
             </div>
             <table ng-table="demo.tableParams" class="table table-condensed table-bordered table-striped">
               <tr ng-repeat="row in $data">
-                <td data-title="'Name'" filter="{name: 'text'}" sortable="'name'">{{row.name}}</td>
-                <td data-title="'Age'" filter="{age: 'number'}" sortable="'age'">{{row.age}}</td>
-                <td data-title="'Money'" filter="{money: 'number'}" sortable="'money'">{{row.money}}</td>
+                <td data-title="'Page'" filter="{page: 'text'}" sortable="'page'">{{row.page}}</td>
+                <td data-title="'Last Day'" filter="{lastDay: 'number'}" sortable="'lastDay'">{{row.lastDay}}</td>
+                <td data-title="'Last Month'" filter="{lastMonth: 'number'}" sortable="'lastMonth'">{{row.lastMonth}}</td>
+                <td data-title="'Total'" filter="{total: 'number'}" sortable="'total'">{{row.total}}</td>
               </tr>
             </table>
           </div>
