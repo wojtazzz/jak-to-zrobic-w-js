@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Lazy loading managed array</title>
-  <!-- <link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'> -->
+  <link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'>
   <link rel='stylesheet' href='https://unpkg.com/ng-table/bundles/ng-table.min.css'>
 
-  <link href="css/bootstrap.css" rel="stylesheet">
+  <!-- <link href="css/bootstrap.css" rel="stylesheet"> -->
   <link href="css/bootstrap-responsive.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 
@@ -17,75 +17,76 @@
 
 <body>
 
-    <div id="header-row">
-        <div class="container">
-          <div class="row">
-    
-            <!--LOGO-->
-            <div class="span3">
-              <a class="brand" href="#"><img src="img/logo.png" /></a>
-            </div>
-            <!-- /LOGO -->
-    
-            <!-- MAIN NAVIGATION -->
-            <div class="span9">
-              <div class="navbar  pull-right">
-                <div class="navbar-inner">
-                  <a data-target=".navbar-responsive-collapse" data-toggle="collapse" class="btn btn-navbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a>
-                  <div class="nav-collapse collapse navbar-responsive-collapse">
-                    <ul class="nav">
-                      <li class="active"><a href="index.html">Home</a></li>
-                      <li class="dropdown">
-                        <a href="about.html" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                          <li><a href="about.html">Company</a></li>
-                          <li><a href="about.html">History</a></li>
-                          <li><a href="about.html">Team</a></li>
-                        </ul>
-                      </li>
-                      <li><a href="service.html">Services</a></li>
-                      <li><a href="blog.html">Blog</a></li>
-                      <li><a href="contact.html">Contact</a></li>
+  <div id="header-row">
+    <div class="container">
+      <div class="row">
+
+        <!--LOGO-->
+        <div class="span3">
+          <a class="brand" href="#"><img src="img/logo.png" /></a>
+        </div>
+        <!-- /LOGO -->
+
+        <!-- MAIN NAVIGATION -->
+        <div class="span9">
+          <div class="navbar  pull-right">
+            <div class="navbar-inner">
+              <a data-target=".navbar-responsive-collapse" data-toggle="collapse" class="btn btn-navbar"><span class="icon-bar"></span><span
+                  class="icon-bar"></span><span class="icon-bar"></span></a>
+              <div class="nav-collapse collapse navbar-responsive-collapse">
+                <ul class="nav">
+                  <li class="active"><a href="index.html">Home</a></li>
+                  <li class="dropdown">
+                    <a href="about.html" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="about.html">Company</a></li>
+                      <li><a href="about.html">History</a></li>
+                      <li><a href="about.html">Team</a></li>
                     </ul>
-                  </div>
-                </div>
+                  </li>
+                  <li><a href="service.html">Services</a></li>
+                  <li><a href="blog.html">Blog</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
               </div>
             </div>
-            <!-- MAIN NAVIGATION -->
           </div>
         </div>
-      </div>
-      <!-- /HEADER ROW -->
-    
-      <div class="container">
-  <div class="row">
-    <div class="col-lg-12">
-      <div ng-app="myApp">
-        <div ng-controller="demoController as demo">
-          <h2 class="page-header">Lazy loading managed array</h2>
-          <div class="bs-callout bs-callout-info">
-            <h4>Overview</h4>
-            <p>You are not limited to having the data array to hand at the time when <code>NgTableParams</code> is
-              created.
-              So for example you could load the data using <code>$http</code> and then hand this to <code>NgTableParams</code></p>
-          </div>
-          <div class="form-inline" style="margin-bottom: 20px">
-            <div class="form-group">
-              <label for="datasets">Select dataset</label>
-              <select id="datasets" class="form-control" ng-model="demo.dataset" ng-options="ds for ds in demo.datasets"
-                ng-change="demo.changeDs()"></select>
-            </div>
-          </div>
-          <table ng-table="demo.tableParams" class="table table-condensed table-bordered table-striped">
-            <tr ng-repeat="row in $data">
-              <td data-title="'Name'" filter="{name: 'text'}" sortable="'name'">{{row.name}}</td>
-              <td data-title="'Age'" filter="{age: 'number'}" sortable="'age'">{{row.age}}</td>
-              <td data-title="'Money'" filter="{money: 'number'}" sortable="'money'">{{row.money}}</td>
-            </tr>
-          </table>
-        </div>
+        <!-- MAIN NAVIGATION -->
       </div>
     </div>
+  </div>
+  <!-- /HEADER ROW -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div ng-app="myApp">
+          <div ng-controller="demoController as demo">
+            <h2 class="page-header">Lazy loading managed array</h2>
+            <div class="bs-callout bs-callout-info">
+              <h4>Overview</h4>
+              <p>You are not limited to having the data array to hand at the time when <code>NgTableParams</code> is
+                created.
+                So for example you could load the data using <code>$http</code> and then hand this to <code>NgTableParams</code></p>
+            </div>
+            <div class="form-inline" style="margin-bottom: 20px">
+              <div class="form-group">
+                <label for="datasets">Select dataset</label>
+                <select id="datasets" class="form-control" ng-model="demo.dataset" ng-options="ds for ds in demo.datasets"
+                  ng-change="demo.changeDs()"></select>
+              </div>
+            </div>
+            <table ng-table="demo.tableParams" class="table table-condensed table-bordered table-striped">
+              <tr ng-repeat="row in $data">
+                <td data-title="'Name'" filter="{name: 'text'}" sortable="'name'">{{row.name}}</td>
+                <td data-title="'Age'" filter="{age: 'number'}" sortable="'age'">{{row.age}}</td>
+                <td data-title="'Money'" filter="{money: 'number'}" sortable="'money'">{{row.money}}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
