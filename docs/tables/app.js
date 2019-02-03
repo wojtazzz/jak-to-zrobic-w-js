@@ -125,60 +125,51 @@ angular.module("ngTableDemos", []);
   }
 })();
 
-(function() {
-    "use strict";
-  
-    var app = angular.module("myApp", ["ngTable", "ngTableDemos"]);
-  
-    app.controller('introController', function(NgTableParams){
-      var self = this;
-      var data = [{name: "Moroni", age: 50},
-          {name: "Simon", age: 43},
-          {name: "Jacob", age: 27},
-          {name: "Nephi", age: 29},
-          {name: "Christian", age: 34},
-          {name: "Tiancum", age: 43},
-          {name: "Jacob", age: 27}
-      ];
-      self.tableParams = new NgTableParams({ count: 5}, { counts: [5, 10, 25], dataset: data});
-  })
-    app.controller("demoController", demoController);
-    demoController.$inject = ["NgTableParams", "ngTableSimpleList"];
-  
-    function demoController(NgTableParams, simpleList) {
-      var self = this;
-  
-      self.changeDs = changeDs;
-      self.datasets = ["1", "2"];
-      self.dataset1 = simpleList;
-      self.dataset2 = createDs2();
-      self.tableParams = new NgTableParams();
-  
-      function changeDs() {
-        self.tableParams.settings({
-          dataset: self["dataset" + self.dataset]
-        });
-      }
-  
-      function createDs2() {
-        return simpleList.map(function(item) {
-          return angular.extend({}, item, {
-            age: item.age + 100
-          });
-        });
-      }
+// App
+
+(function () {
+  "use strict";
+
+  var app = angular.module("myApp", ["ngTable", "ngTableDemos"]);
+
+  app.controller("demoController", demoController);
+  demoController.$inject = ["NgTableParams", "ngTableSimpleList"];
+
+  function demoController(NgTableParams, simpleList) {
+    var self = this;
+
+    self.changeDs = changeDs;
+    self.datasets = ["1", "2"];
+    self.dataset1 = simpleList;
+    self.dataset2 = createDs2();
+    self.tableParams = new NgTableParams();
+
+    function changeDs() {
+      self.tableParams.settings({
+        dataset: self["dataset" + self.dataset] });
+
     }
-  })();
-  
-  
-  (function() {
-    "use strict";
-  
-    angular.module("myApp").run(configureDefaults);
-    configureDefaults.$inject = ["ngTableDefaults"];
-  
-    function configureDefaults(ngTableDefaults) {
-      ngTableDefaults.params.count = 5;
-      ngTableDefaults.settings.counts = [];
+
+    function createDs2() {
+      return simpleList.map(function (item) {
+        return angular.extend({}, item, {
+          age: item.age + 100 });
+
+      });
     }
-  })();
+  }
+})();
+
+
+(function () {
+  "use strict";
+
+  angular.module("myApp").run(configureDefaults);
+  configureDefaults.$inject = ["ngTableDefaults"];
+
+  function configureDefaults(ngTableDefaults) {
+    ngTableDefaults.params.count = 5;
+    ngTableDefaults.settings.counts = [];
+  }
+})();
+//# sourceURL=pen.js
