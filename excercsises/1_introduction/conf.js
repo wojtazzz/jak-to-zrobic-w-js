@@ -11,7 +11,7 @@ exports.config = {
     /// MINIMAL CONFIGURATION END /////////////////////////////////////////////////////
 
 	onPrepare: function () {
-
+//testttttt
 	  browser.manage().window().setSize(1680, 1050);	
 	  browser.ignoreSynchronization = true; 	
 
