@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-// nowy plik w masterze1
+// zmiana
 =======
-//zmiana w branchu
+// zmiana 
 >>>>>>> firs_branch
