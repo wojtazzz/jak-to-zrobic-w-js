@@ -20,8 +20,8 @@ describe('Protractor Workshop app', function() {
 	it('should display drop down after clicking on About menu item', function(){
 		homePage.clickMenuAtIdx(1);
 		var EC = protractor.ExpectedConditions;
-		var dropdownMenu = element(by.css('.dropdown-menu'));
-		browser.wait(EC.visibilityOf(dropdownMenu), 1000, 'Element still not exist');
+		var dropdownMenu = homePage.findDropdown();
+		browser.wait(EC.visibilityOf(dropdownMenu), 500, 'Element still not exist');
 		expect(dropdownMenu.isDisplayed()).toBe(true);
 	});
 

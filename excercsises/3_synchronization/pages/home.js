@@ -1,31 +1,34 @@
-var HomePage = function() {
+var HomePage = function () {
 
-  this.menuItems = element.all(by.css('ul.nav > li > a')); 
+  this.menuItems = element.all(by.css('ul.nav > li > a'));
 
-  this.get = function() {
+  this.get = function () {
     browser.driver.get('http://jacekokrojek.github.io/jak-to-zrobic-w-js/');
   };
 
-  this.getTitle = function() {
+  this.getTitle = function () {
     return browser.driver.getTitle();
   };
 
-  this.clickMenuAtIdx = function(idx) {
+  this.clickMenuAtIdx = function (idx) {
     this.menuItems.get(idx).click();
   };
 
-  this.getMenuTextAtIdx = function(idx) {
+  this.getMenuTextAtIdx = function (idx) {
     return this.menuItems.get(idx);
   };
-  
-  this.pushNextButton = function(){
+
+  this.pushNextButton = function () {
     element(by.css('a.right')).click();
   };
 
-  this.getCarouselElement = function(){
+  this.getCarouselElement = function () {
     return element(by.css('div.active h1'));
   };
 
+  this.findDropdown = function () {
+    return element(by.css('.dropdown-menu'));
+  };
 };
 
 module.exports = new HomePage();
