@@ -1,11 +1,12 @@
-var Contact = function () {
+var ContactPage = function () {
 
     this.get = function () {
         browser.driver.get('http://jacekokrojek.github.io/jak-to-zrobic-w-js/contact.html');
     };
 
     this.findElementByText = function(text) {
-        return element(by.xpath("//*[contains(text(), '" + text + "')]")).isDisplayed();
+        const selector = "//*[contains(text(), '" + text + "')]";
+        return element(by.xpath(selector)).isDisplayed();
     };
 
     this.getSiteTitle = function () {
@@ -13,15 +14,18 @@ var Contact = function () {
     };
 
     this.getInputNameElement = function(){
-        return element(by.id("name"));
+        const selector = "name";
+        return element(by.id(selector));
     };
 
     this.getInputEmailElement = function(){
-        return element(by.id("email"));
+        const selector = "email"
+        return element(by.id(selector));
     };
 
     this.getInputMessageElement = function(){
-        return element(by.id('content'));
+        const selector = "content"
+        return element(by.id(selector));
     }
 
     this.pushSubmit = function(){
@@ -35,4 +39,4 @@ var Contact = function () {
 
 };
 
-module.exports = new Contact();
+module.exports = new ContactPage();

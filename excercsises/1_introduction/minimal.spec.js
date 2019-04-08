@@ -47,7 +47,7 @@ describe('Protractor workshop app', function () {
 			expect(items[3].getText()).toContain('Blog');
 			expect(items[4].getText()).toContain('Contact');
 		});*/
-		
+
 		var menuItems = element.all(by.css('ul.nav > li > a'));
 		var expectedItems = ["Home", "About", "Services", "Blog", "Contact"];
 		expect(menuItems.getText()).toEqual(expectedItems);
