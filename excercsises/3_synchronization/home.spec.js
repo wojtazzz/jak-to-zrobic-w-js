@@ -14,7 +14,7 @@ describe('Protractor Workshop app', function() {
 		var expectedHeader = 'Example Headline 2'
 		homePage.pushNextButton();
 		browser.sleep(1000);
-		expect(homePage.getCarouselElement().getText()).toEqual(expectedHeader)
+		expect(homePage.getCarouselElement().getText()).toEqual(expectedHeader);
 	});
 	
 	it('should display drop down after clicking on About menu item', function(){
