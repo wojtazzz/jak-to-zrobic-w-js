@@ -6,11 +6,11 @@ describe('Protractor Workshop app', function() {
 		homePage.get();
 	});
 
-	it('hould have home page with title "Protractor workshop | Home"', function(){
+	xit('should have home page with title "Protractor workshop | Home"', function(){
 		expect(homePage.getTitle()).toEqual("Protractor workshop | Home");
 	});
 
-	it('should have "Example headline 2" carousel item after clicking on next arrow', function(){
+	xit('should have "Example headline 2" carousel item after clicking on next arrow', function(){
 		var expectedHeader = 'Example Headline 2'
 		var activeCarouselHeader = element(by.css('div.active h1'));
 		var nextButton = element(by.css('a.right'));
