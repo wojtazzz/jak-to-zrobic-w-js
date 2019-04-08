@@ -1,13 +1,13 @@
-var contact = require('./pages/contact');
+var contactPage = require('./pages/contact');
 
 describe('Protractor Workshop app', function() {
 
 	beforeEach(function () {
-		contact.get();
+		contactPage.get();
 	});
 
 	it('should have "Get in touch" and "Address" sections on Contact Us page', function(){
-		expect(contact.findElementByText("Get in Touch") && contact.findElementByText("Address")).toBe(true);
+		expect(contactPage.findElementByText("Get in Touch") && contactPage.findElementByText("Address")).toBe(true);
 	});
 
 
