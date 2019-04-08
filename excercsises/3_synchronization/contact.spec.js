@@ -15,7 +15,13 @@ describe('Protractor Workshop app', function() {
 		contact.sendEmail('cos@gmail.con');
 		contact.sendMsg('hello');
 		contact.clickSubmit();
-		expect(contact.findInfo("Your message has been sent")).toBe(true);
+		var EC = protractor.ExpectedConditions;
+		var DisplayMessage = "Your message has been sent.";
+		var Message = contact.findMessageBy(DisplayMessage, 'h3');
+		browser.wait(EC.visibilityOf(Message), 15000);
+		expect(Message.isDisplayed()).toBe(true);
+		
+		
 		
 
 	});

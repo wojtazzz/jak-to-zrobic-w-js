@@ -12,15 +12,24 @@ describe('Protractor Workshop app', function() {
 
 	it('should have "Example headline 2" carousel item after clicking on next arrow', function(){
 		var expectedHeader = 'Example Headline 2'
-		var activeCarouselHeader = element(by.css('div.active h1'));
 		var nextButton = element(by.css('a.right'));
+		var activeCarouselHeader = element(by.css('div.active h1'));
 		nextButton.click();
-		//Replace this agly code 
-		browse.sleep(1000);
-		expect(activeCarouselHeader.getText).toEqual(expectedHeader)
+		var header2 = element(by.xpath("//tag[contains(text(), 'Example Headline 2')]"));
+		
+		//Replace this agly code
+		var EC = protractor.ExpectedConditions;
+		browser.wait(EC.visibilityOf(header2), 10000);
+		expect(activeCarouselHeader.getText()).toEqual(expectedHeader);
 	});
 	
-	xit('should display drop down after clicking on About menu item', function(){
+	it('should display drop down after clicking on About menu item', function(){
+		homePage.clickMenuAtIdx(1);
+		var EC = protractor.ExpectedConditions;
+		var menu = homePage.getDropdown();
+		browser.wait(EC.visibilityOf(menu), 15000);
+		expect(menu.isDisplayed()).toBe(true);
+
 		
 	});
 

@@ -17,6 +17,10 @@ var HomePage = function() {
   this.getMenuTextAtIdx = function(idx) {
     return this.menuItems.get(idx);
   };
+
+  this.getDropdown = function(){
+    return element(by.css('.dropdown-menu'));
+  };
   
 };
 

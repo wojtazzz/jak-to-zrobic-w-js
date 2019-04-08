@@ -44,8 +44,8 @@ var Contact = function() {
   };
 
 
-  this.findInfo = function (text) {
-    return element(by.xpath("//*[contains(text(),'" + text + "')]")).isDisplayed();
+  this.findMessageBy = function (text, tagName ='*') {
+    return element(by.xpath("//" +tagName+ "[contains(text(),'" + text + "')]"));
 
 };
 };

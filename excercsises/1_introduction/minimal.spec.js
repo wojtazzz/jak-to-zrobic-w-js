@@ -12,8 +12,8 @@ describe('Protractor workshop app', function() {
 
 	it('should have footer with Copyright © 2013 Shapebootstrap | All Rights Reserved', function(){		
 		var footerCopyright = element(by.xpath('//footer/div/div')); 
-		var expectedHTML = "Copyright © 2013 Shapebootstrap | All Rights Reserved"
-		expect(footerCopyright.getText()).toContain(expectedHTML)
+		var expectedHTML = "Copyright © 2013 Shapebootstrap | All Rights Reserved";
+		expect(footerCopyright.getText()).toContain(expectedHTML);
 	});
 
 	/**
@@ -23,12 +23,8 @@ describe('Protractor workshop app', function() {
 
 	it('should have "Example headline 1" carousel item after entering site', function(){
 		var ExampleHeadline1 = element(by.css('#myCarousel  h1'));
-		var ExpectedHeadline1 = "Example Headline 1"
-		expect (ExampleHeadline1.getText()).toContain(ExpectedHeadline1)
-
-		
-	
-
+		var ExpectedHeadline1 = "Example Headline 1";
+		expect (ExampleHeadline1.getText()).toContain(ExpectedHeadline1);
 
 	});
 	
@@ -81,12 +77,8 @@ describe('Protractor workshop app', function() {
 		
 		}).first().click();
 
-	// var title = browser.driver.getTitle();
-	// 	expect(title).toEqual('Protractor workshop | Blog');
-
-	var site = browser.driver.get('http://jacekokrojek.github.io/jak-to-zrobic-w-js/blog.html')
-		expect(site).toEqual(site)
-
+	var title = browser.driver.getTitle();
+	expect(title).toEqual('Protractor workshop | Blog');
 	});
 
 });
