@@ -29,6 +29,11 @@ var HomePage = function () {
   this.findDropdown = function () {
     return element(by.css('.dropdown-menu'));
   };
+
+  this.findHeadline = function () {
+    const selector = "//h1[contains(text(), 'Example headline 2')]";
+    return element(by.xpath(selector));
+  };
 };
 
 module.exports = new HomePage();

@@ -6,11 +6,11 @@ describe('Protractor Workshop app', function () {
 		contactPage.get();
 	});
 
-	it('should have Contact page with title "Protractor workshop | Contact us"', function () {
+	xit('should have Contact page with title "Protractor workshop | Contact us"', function () {
 		expect(contactPage.getTitle()).toEqual("Protractor workshop | Contact us");
 	});
 
-	it('should display text "Your message has been sent." when user sends message  ', function () {
+	xit('should display text "Your message has been sent." when user sends message  ', function () {
 		insertDataAndSubmit();
 		var EC = protractor.ExpectedConditions;
 		const newLocal = 'Your message has been sent.';
