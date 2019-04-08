@@ -18,6 +18,14 @@ var HomePage = function() {
     return this.menuItems.get(idx);
   };
   
+  this.pushNextButton = function(){
+    element(by.css('a.right')).click();
+  };
+
+  this.getCarouselElement = function(){
+    return element(by.css('div.active h1'));
+  };
+
 };
 
 module.exports = new HomePage();

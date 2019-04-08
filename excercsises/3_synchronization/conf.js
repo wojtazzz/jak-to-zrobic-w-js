@@ -20,7 +20,7 @@ exports.config = {
         displayStacktrace: true
       })); 
 	  
-      /* 
+     /* 
 	  var jasmineReporters = require('jasmine-reporters');
 	  jasmine.getEnv().addReporter(new jasmineReporters.JUnitXmlReporter({
          consolidateAll: true,
@@ -29,10 +29,10 @@ exports.config = {
       }));
 	  */
 
-      /* 
+      
 	  var Jasmine2HtmlReporter = require('protractor-jasmine2-html-reporter');
 	  jasmine.getEnv().addReporter( new Jasmine2HtmlReporter({}));
-	  */
+	  
       
     },
 

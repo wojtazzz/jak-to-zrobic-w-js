@@ -6,7 +6,7 @@ describe('Protractor Workshop app', function () {
 		contactPage.get();
 	});
 
-	it('should have Contact page with title "Protractor Workshop | Contact us"', function () {
+	it('should have Contact page with title "Protractor workshop | Contact us"', function () {
 		expect(contactPage.getTitle()).toEqual("Protractor workshop | Contact us");
 	});
 
