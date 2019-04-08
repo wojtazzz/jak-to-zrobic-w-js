@@ -1,4 +1,4 @@
-var Contact = function(){
+var ContactPage = function(){
      
 
 
@@ -11,7 +11,7 @@ var Contact = function(){
         return browser.driver.getTitle();
     };
 
-    this.findInfo = function(text){
+    this.getSectionsPage= function(text){
         return element(by.xpath("//*[contains(text(),'" + text + "')]")).isDisplayed();
     
     };
