@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites disabled="0" errors="0" failures="0" tests="5" time="6.826">
+ <testsuite name="Protractor Workshop app" timestamp="2019-04-08T11:31:47" hostname="localhost" time="6.821" errors="0" tests="2" skipped="0" disabled="0" failures="0">
+  <testcase classname="Protractor Workshop app" name="should have Contact page with title &quot;Protractor workshop | Contact us&quot;" time="0.51" />
+  <testcase classname="Protractor Workshop app" name="should display text &quot;Your message has been sent.&quot; when user sends message  " time="6.306" />
+ </testsuite>
+ <testsuite name="Protractor Workshop app" timestamp="2019-04-08T11:31:54" hostname="localhost" time="0.005" errors="0" tests="3" skipped="3" disabled="0" failures="0">
+  <testcase classname="Protractor Workshop app" name="should have home page with title &quot;Protractor workshop | Home&quot;" time="0">
+   <skipped message="Temporarily disabled with xit" />
+  </testcase>
+  <testcase classname="Protractor Workshop app" name="should have &quot;Example headline 2&quot; carousel item after clicking on next arrow" time="0.002">
+   <skipped message="Temporarily disabled with xit" />
+  </testcase>
+  <testcase classname="Protractor Workshop app" name="should display drop down after clicking on About menu item" time="0.001">
+   <skipped message="Temporarily disabled with xit" />
+  </testcase>
+ </testsuite>
+</testsuites>

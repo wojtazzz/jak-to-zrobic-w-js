@@ -14,24 +14,24 @@ var ContactPage = function () {
     this.menuItems.get(idx).click();
   };
 
-  this.getInputNameElement = function () {
-    return element(by.id("name"));
+  this.inputName = function (txt) {
+    const selector = "name";
+    element(by.id(selector)).sendKeys(txt);
   };
 
-  this.getInputEmailElement = function () {
-    return element(by.id("email"));
+  this.inputEmail = function (txt) {
+    const selector = "email"
+    element(by.id(selector)).sendKeys(txt);
   };
 
-  this.getInputMessageElement = function () {
-    return element(by.id('content'));
-  }
+  this.inputMessage = function (txt) {
+    const selector = 'content'
+    element(by.id(selector)).sendKeys(txt);
+  };
 
   this.pushSubmit = function () {
-    element(by.buttonText('Submit')).click();
-  };
-
-  this.sendTextToElement = function (text, elem) {
-    elem.sendKeys(text);
+    const selector = 'Submit';
+    element(by.buttonText(selector)).click();
   };
 
   this.findElementByText = function (text, tagName = '*') {
