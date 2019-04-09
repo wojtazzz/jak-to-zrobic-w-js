@@ -11,7 +11,7 @@ var ContactPage = function(){
         return browser.driver.getTitle();
     };
 
-    this.getSectionsPage= function(text){
+    this.getSectionsPage = function(text){
         return element(by.xpath("//*[contains(text(),'" + text + "')]")).isDisplayed();
     
     };
@@ -22,4 +22,4 @@ var ContactPage = function(){
 
 };
 
-module.exports = new Contact();
+module.exports = new ContactPage();

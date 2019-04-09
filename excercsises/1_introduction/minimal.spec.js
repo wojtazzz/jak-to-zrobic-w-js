@@ -22,7 +22,7 @@ describe('Protractor workshop app', function() {
 	 */
 
 	it('should have "Example headline 1" carousel item after entering site', function(){
-		var ExampleHeadline1 = element(by.css('#myCarousel  h1'));
+		var ExampleHeadline1 = element(by.css('#myCarousel .active h1'));
 		var ExpectedHeadline1 = "Example Headline 1";
 		expect (ExampleHeadline1.getText()).toContain(ExpectedHeadline1);
 
