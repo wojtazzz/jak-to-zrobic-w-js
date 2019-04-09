@@ -45,7 +45,7 @@ describe('Protractor workshop app', function () {
 
 	/**
 	* Check http://angular.github.io/protractor/#/api?view=ElementArrayFinder
-	* to see how map function can be used to verify content of multiple elements
+	* to see how map function can be used to verify content of multiple elements 
 	*/
 
 	it('should have Feature A, Feature B, Feature C sections ...', function () {
