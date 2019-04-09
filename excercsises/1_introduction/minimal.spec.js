@@ -38,16 +38,6 @@ describe('Protractor workshop app', function () {
 	 * to see how get function can be used
 	 */
 	it('should have menu items with links to "Home", "About", "Services", "Blog", "Contact",  pages', function () {
-
-		/*var menuItems = element.all(by.css('ul.nav > li > a')).then(function (items) {
-			expect(items.length).toBe(5);
-			expect(items[0].getText()).toContain('Home');
-			expect(items[1].getText()).toContain('About');
-			expect(items[2].getText()).toContain('Services');
-			expect(items[3].getText()).toContain('Blog');
-			expect(items[4].getText()).toContain('Contact');
-		});*/
-
 		var menuItems = element.all(by.css('ul.nav > li > a'));
 		var expectedItems = ["Home", "About", "Services", "Blog", "Contact"];
 		expect(menuItems.getText()).toEqual(expectedItems);
@@ -55,7 +45,7 @@ describe('Protractor workshop app', function () {
 
 	/**
 	* Check http://angular.github.io/protractor/#/api?view=ElementArrayFinder
-	* to see how map function can be used to verify content of multiple elements
+	* to see how map function can be used to verify content of multiple elements 
 	*/
 
 	it('should have Feature A, Feature B, Feature C sections ...', function () {
@@ -64,6 +54,7 @@ describe('Protractor workshop app', function () {
 			expect(items[0].getText()).toContain('Feature A');
 			expect(items[1].getText()).toContain('Feature B');
 			expect(items[2].getText()).toContain('Feature C');
+			//
 		});
 
 	});
