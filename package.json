@@ -8,8 +8,8 @@
   "scripts": {
     "start": "node app.js",
     "test": "protractor excercsises/1_introduction/conf.js",
-    "test1":"protractor excercsises/2_page_object/conf.js",
-    "test2":"protractor excercsises/3_synchronization/conf.js", 
+    "test1": "protractor excercsises/2_page_object/conf.js",
+    "test2": "protractor excercsises/3_synchronization/conf.js",
     "preinstall": "npm install protractor && webdriver-manager update"
   },
   "repository": {
@@ -21,6 +21,7 @@
     "change-case": "^2.3.0",
     "cli-color": "^1.1.0",
     "gulp": "^4.0.0",
+    "gulp-protractor": "^4.1.1",
     "jasmine": "^2.3.2",
     "jasmine-reporters": "^2.0.7",
     "jasmine-spec-reporter": "^2.5.0",
