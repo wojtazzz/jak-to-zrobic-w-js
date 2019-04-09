@@ -17,6 +17,18 @@ var HomePage = function() {
   this.getMenuTextAtIdx = function(idx) {
     return this.menuItems.get(idx);
   };
+
+  this.getDropdown = function(){
+    return element(by.css('.dropdown-menu'));
+  };
+
+  this.nextButton = function(){
+    return element(by.css('a.right')).click();
+  }
+  
+  this.getHeader2 = function () {
+    return element(by.xpath("//h1[contains(text(), 'Example headline 2')]"));
+  };
   
 };
 

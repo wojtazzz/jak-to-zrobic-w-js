@@ -1,5 +1,5 @@
 var homePage = require('./pages/home');
-var contact = require('./pages/contact');
+var contactPage = require('./pages/contact');
 
 describe('Protractor Workshop app', function() {
 
@@ -16,7 +16,7 @@ describe('Protractor Workshop app', function() {
 	it('should have Contact menu item with link to Contact us page', function(){
 		expect(homePage.getMenuTextAtIdx(4).getText()).toEqual("Contact");
 		homePage.clickMenuAtIdx(4)
-		expect(contact.getTitle()).toEqual("Protractor workshop | Contact us");
+		expect(contactPage.getTitle()).toEqual("Protractor workshop | Contact us");
 	});
 
 

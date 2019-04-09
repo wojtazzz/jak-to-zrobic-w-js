@@ -1,4 +1,4 @@
-var Contact = function() {
+var ContactPage = function() {
 
   this.menuItems = element.all(by.css('ul.nav > li > a')); 
 
@@ -44,10 +44,10 @@ var Contact = function() {
   };
 
 
-  this.findInfo = function (text) {
-    return element(by.xpath("//*[contains(text(),'" + text + "')]")).isDisplayed();
+  this.findMessageBy = function (text, tagName ='*') {
+    return element(by.xpath("//" +tagName+ "[contains(text(),'" + text + "')]"));
 
 };
 };
 
-module.exports = new Contact();
+module.exports = new ContactPage();
