@@ -1,4 +1,4 @@
-var Contact = function() {
+var ContactPage = function() {
 
   this.menuItems = element.all(by.css('ul.nav > li > a')); 
 
@@ -50,4 +50,4 @@ var Contact = function() {
 };
 };
 
-module.exports = new Contact();
+module.exports = new ContactPage();
