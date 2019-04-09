@@ -14,16 +14,16 @@ describe('Protractor Workshop app', function() {
 		var expectedHeader = 'Example Headline 2'
 		homePage.nextButton();
 		var header2 = homePage.getHeader2();
-		var EC = protractor.ExpectedConditions;
-		browser.wait(EC.visibilityOf(header2), 10000);
+		var ec = protractor.ExpectedConditions;
+		browser.wait(ec.visibilityOf(header2), 10000);
 		expect(header2.getText()).toEqual(expectedHeader);
 	});
 	
 	it('should display drop down after clicking on About menu item', function(){
 		homePage.clickMenuAtIdx(1);
-		var EC = protractor.ExpectedConditions;
+		var ec = protractor.ExpectedConditions;
 		var menu = homePage.getDropdown();
-		browser.wait(EC.visibilityOf(menu), 15000);
+		browser.wait(ec.visibilityOf(menu), 15000);
 		expect(menu.isDisplayed()).toBe(true);
 
 		
