@@ -28,3 +28,9 @@ node_modules
 
 # Test results
 results/html
+
+# HTML report
+htmlReport.html
+
+# screenshots
+screenshots
