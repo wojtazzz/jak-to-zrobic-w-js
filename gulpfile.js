@@ -1,24 +1,35 @@
 var gulp = require('gulp');
+var runSequence = require('run-sequence');
+var del = require('del')
 
-gulp.task('elo', function(){
-console.log(process.argv.splice[2])
+
+gulp.task('elo', function () {
+
+    gulp.src(["/home/bartosz/Desktop/Jacek/excercsises/3_synchronization/contact.spec.js"])
+        .pipe(protractor({
+            configFile: '/home/bartosz/Desktop/Jacek/excercsises/3_synchronization/conf.js'
+
+        }))
+        .on('error', function (e) { throw e; });
+
 });
 
 var protractor = require("gulp-protractor").protractor;
 
 var exc = {
-    '1': "excercsises/2_page_object/home.spec.js",
-    '2': "excercsises/3_synchronization/contact.spec.js",
-    '3': "excercsises/3_synchronization/home.spec.js"
+    "1": "excercsises/1_introduction/conf.js",
+    '2': "excercsises/2_page_object/conf.js",
+    "3": "excercsises/3_synchronization/conf.js",
+   
 };
 
 
 
 gulp.task('try', function(){
-    
+
     var queue = process.argv.slice(-1);
 
-    gulp.src(["excercsises/*js"])
+    gulp.src(["/*js"])
     .pipe(protractor({
         configFile: exc[queue]
     }))
@@ -26,13 +37,43 @@ gulp.task('try', function(){
 
 });
 
-gulp.task('before', function(){
-    console.log("start")
+gulp.task('all-tests', function () {
+    for (var i = 1; i <= 3; i++) {
+        test2(i)
+    };
+
 });
+
+function test2  (index) {
+    gulp.src(["/*js"])
+        .pipe(protractor({
+            configFile: exc[index]
+        }))
+        .on('error', function (e) { throw e });
+
+};
+
+gulp.task('clean', function(){
+    return del.sync('screenshots');
+});
+
+gulp.task('before', function(){
+    gulp.start('clean');
+});
+
 
 
 gulp.task('after',function(){
-    console.log("finish")
+    console.log("finished testing");
 
 });
+
+
+gulp.task('default', function(){
+    gulp.start('before','all-tests', 'after');
+    
+
+});
+
+
 
