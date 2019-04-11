@@ -1,6 +1,10 @@
-var gulp = require('gulp');
+var protractor = require("gulp-protractor").protractor;
+var gulp = require('gulp'),
+jslint = require('./');
 var runSequence = require('run-sequence');
-var del = require('del')
+var del = require('del');
+var jshint = require ("gulp-jshint");
+var jshintcli = require('jshint/src/cli');
 
 
 gulp.task('elo', function () {
@@ -14,7 +18,7 @@ gulp.task('elo', function () {
 
 });
 
-var protractor = require("gulp-protractor").protractor;
+
 
 var exc = {
     "1": "excercsises/1_introduction/conf.js",
@@ -71,9 +75,13 @@ gulp.task('after',function(){
 
 gulp.task('default', function(){
     gulp.start('before','all-tests', 'after');
-    
 
 });
 
 
+gulp.task('jslint', function () {
+    gulp.src('/*js')
+        .pipe(jshint())
+        .pipe(jshint.reporter('report'));
+});
 
