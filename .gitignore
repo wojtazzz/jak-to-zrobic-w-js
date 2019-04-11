@@ -30,7 +30,7 @@ node_modules
 results/html
 
 # HTML report
-htmlReport.html
+!htmlReport.html
 
 # screenshots
 screenshots
