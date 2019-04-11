@@ -5,6 +5,9 @@ var runSequence = require('run-sequence');
 var del = require('del');
 var jshint = require ("gulp-jshint");
 var jshintcli = require('jshint/src/cli');
+var stylish = require('jshint-stylish')
+var tablereporter = require('jshint-table-reporter');
+
 
 
 gulp.task('elo', function () {
@@ -74,14 +77,13 @@ gulp.task('after',function(){
 
 
 gulp.task('default', function(){
-    gulp.start('before','all-tests', 'after');
-
+    gulp.start('before','all-tests', 'after', 'jslint');
 });
 
 
 gulp.task('jslint', function () {
-    gulp.src('/*js')
+    gulp.src('excercsises/*/*js')
         .pipe(jshint())
-        .pipe(jshint.reporter('report'));
+        .pipe(jshint.reporter(tablereporter))
 });
 
