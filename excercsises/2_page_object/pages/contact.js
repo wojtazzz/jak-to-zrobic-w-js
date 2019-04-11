@@ -5,7 +5,7 @@ var ContactPage = function () {
     };
 
     this.findElementByText = function(text) {
-        const selector = "//*[contains(text(), '" + text + "')]";
+        var selector = "//*[contains(text(), '" + text + "')]";
         return element(by.xpath(selector)).isDisplayed();
     };
 
@@ -14,19 +14,19 @@ var ContactPage = function () {
     };
 
     this.getInputNameElement = function(){
-        const selector = "name";
+        var selector = "name";
         return element(by.id(selector));
     };
 
     this.getInputEmailElement = function(){
-        const selector = "email"
+        var selector = "email"
         return element(by.id(selector));
     };
 
     this.getInputMessageElement = function(){
-        const selector = "content"
+        var selector = "content"
         return element(by.id(selector));
-    }
+    };
 
     this.pushSubmit = function(){
         element(by.buttonText('Submit')).click();
