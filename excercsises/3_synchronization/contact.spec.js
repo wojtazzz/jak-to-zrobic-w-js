@@ -16,13 +16,11 @@ describe('Protractor Workshop app', function() {
 		contactPage.sendMsg('hello');
 		contactPage.clickSubmit();
 		var ec = protractor.ExpectedConditions;
-		var DisplayMessage = "Your message has been sent.";
-		var Message = contactPage.findMessageBy(DisplayMessage, 'h3');
-		browser.wait(ec.visibilityOf(Message), 15000);
-		expect(Message.isDisplayed()).toBe(true);
-		
-		
-		
+
+		var displayMessage = "Your message has been sent.";
+		var message = contactPage.findMessageBy(displayMessage, 'h3');
+		browser.wait(ec.visibilityOf(message), 15000);
+		expect(message.isDisplayed()).toBe(true);
 
 	});
 
