@@ -12,7 +12,7 @@ var tablereporter = require('jshint-table-reporter');
 
 gulp.task('elo', function () {
 
-    gulp.src(["/home/bartosz/Desktop/Jacek/excercsises/3_synchronization/contact.spec.js"])
+    gulp.src(["/home/bartosz/Desktop/Jacek/excercsises/*.js"])
         .pipe(protractor({
             configFile: '/home/bartosz/Desktop/Jacek/excercsises/3_synchronization/conf.js'
 
@@ -26,8 +26,7 @@ gulp.task('elo', function () {
 var exc = {
     "1": "excercsises/1_introduction/conf.js",
     '2': "excercsises/2_page_object/conf.js",
-    "3": "excercsises/3_synchronization/conf.js",
-   
+    "3": "excercsises/3_synchronization/conf.js" 
 };
 
 
@@ -36,7 +35,7 @@ gulp.task('try', function(){
 
     var queue = process.argv.slice(-1);
 
-    gulp.src(["/*js"])
+    gulp.src(["/home/bartosz/Desktop/Jacek/excercsises/2_page_object/*.spec.js"])
     .pipe(protractor({
         configFile: exc[queue]
     }))
