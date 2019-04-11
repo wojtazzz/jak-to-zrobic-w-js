@@ -8,7 +8,8 @@ var jshint = require("gulp-jshint");
 var tests = {
     "1": "excercsises/1_introduction/conf.js",
     "2": "excercsises/2_page_object/conf.js",
-    "3": "excercsises/3_synchronization/conf.js"
+    "3": "excercsises/3_synchronization/conf.js",
+    "4": "excercsises/4_inheritance/conf.js"
 };
 
 gulp.task("task", async function () {
@@ -23,7 +24,7 @@ gulp.task("before", function () {
 
 
 gulp.task("test", async function () {
-     for (var i = 1; i <= 3; i++) {
+     for (var i = 1; i <= 4; i++) {
         runTest(i);
     }
 });

@@ -14,9 +14,10 @@ var HomePage = function() {
 
   this.menuItems = element.all(by.css('ul.nav > li > a')); 
 
-  this.get = function() {
-	this.load('/');    
+  HomePage.prototype.load = function () {
+    Page.prototype.load.call(this, "/index.html");
   };
+
 
   this.clickMenuAtIdx = function(idx) {
     this.menuItems.get(idx).click();
@@ -24,6 +25,23 @@ var HomePage = function() {
 
   this.getMenuTextAtIdx = function(idx) {
     return this.menuItems.get(idx);
+  };
+
+  this.pushNextButton = function () {
+    element(by.css('a.right')).click();
+  };
+
+  this.getCarouselElement = function () {
+    return element(by.css('div.active h1'));
+  };
+
+  this.findDropdown = function () {
+    return element(by.css('.dropdown-menu'));
+  };
+
+  this.findHeadline = function () {
+    const selector = "//h1[contains(text(), 'Example headline 2')]";
+    return element(by.xpath(selector));
   };
   
 };

@@ -1,24 +1,30 @@
-var homePage = require(browser.__pagesDir + '/home');
-var speakers = require(browser.__dataDir + '/speakers');
+var homePage = require('./pages/home');
 
-describe('How to do it in JS homepage', function() {
+describe('Protractor Workshop app', function() {
 
 	beforeEach(function () {
-		homePage.get();
+		homePage.load();
 	});
 
-	it('should haveAgile & Automation Days | Konferencja i Warsztaty title', function(){
-		expect(homePage.getTitle()).toEqual("Agile & Automation Days | Konferencja i Warsztaty");
+	it('should have home page with title "Protractor workshop | Home"', function(){
+		expect(homePage.getTitle()).toEqual("Protractor workshop | Home");
 	});
 
-	xit('should contain correct speakers', function(){
-		homePage.scrolltoSperakersSection();
-		homePage.takeScreenshot("screen-1");
-		homePage.scrollPageDown();
-		homePage.takeScreenshot("screen-2");
-		homePage.scrollPageDown();
-		homePage.takeScreenshot("screen-3");
-		expect(homePage.getSpeakers()).toEqual(speakers.data);
+	it('should have "Example headline 2" carousel item after clicking on next arrow', function(){
+		var expectedHeader = 'Example Headline 2'
+		homePage.pushNextButton();
+		var EC = protractor.ExpectedConditions;
+		var headline = homePage.findHeadline();
+		browser.wait(EC.visibilityOf(headline), 1000, 'Element still not exist');
+		expect(headline.getText()).toEqual(expectedHeader);
+	});
+	
+	it('should display drop down after clicking on About menu item', function(){
+		homePage.clickMenuAtIdx(1);
+		var EC = protractor.ExpectedConditions;
+		var dropdownMenu = homePage.findDropdown();
+		browser.wait(EC.visibilityOf(dropdownMenu), 500, 'Element still not exist');
+		expect(dropdownMenu.isDisplayed()).toBe(true);
 	});
 
 });
