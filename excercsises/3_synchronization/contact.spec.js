@@ -16,15 +16,10 @@ describe('Protractor Workshop app', function() {
 		contactPage.sendEmail('cos@gmail.con');
 		contactPage.sendMsg('hello');
 		contactPage.clickSubmit();
+
 		var message = contactPage.findMessageBy();
 		browser.wait(ec.visibilityOf(message), 15000);
 		expect(message.isDisplayed()).toBe(true);
-
-
-
-		
-		
-
 
 	});
 
