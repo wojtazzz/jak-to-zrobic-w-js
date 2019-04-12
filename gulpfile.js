@@ -10,7 +10,7 @@ var tablereporter = require('jshint-table-reporter');
 
 
 
-gulp.task('TestTrial', function () {
+gulp.task('testTrial', function () {
 
     gulp.src(["/home/bartosz/Desktop/Jacek/excercsises/*.js"])
         .pipe(protractor({
