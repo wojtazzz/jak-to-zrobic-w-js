@@ -1,15 +1,14 @@
-var clc = require('cli-color');
+var clc = require("cli-color");
 
-
-export class Page {
+class Page {
 
     constructor() {
         this.logEnabled = true;
     }
 
     load(url) {
-        this.log('load', url);
-        browser.get('http://jacekokrojek.github.io/jak-to-zrobic-w-js' + url);
+        this.log("load", url);
+        browser.get("http://jacekokrojek.github.io/jak-to-zrobic-w-js" + url);
     }
 
     getTitle() {
@@ -17,40 +16,12 @@ export class Page {
     }
     log() {
         if (this.logEnabled) {
-            console.error.apply(console, [clc.cyan('DEBUG|')].concat(Array.prototype.slice.call(arguments)));
+            console.error.apply(console, [clc.cyan("DEBUG|")].concat(Array.prototype.slice.call(arguments)));
         }
     }
+    waitForElement(elem, time) {
+        var EC = protractor.ExpectedConditions;
+        browser.wait(EC.visibilityOf(elem), time, "Element still not exist");
+    }
 }
-//var Page = function () { };
-
-// /**
-//  * Sets logging mode
-//  * @returns A page title.
-//  */
-//Page.prototype.logEnabled = true;
-
-// /**
-//  * Loads given url in the browser
-//  * @param url
-//  * @returns A promise which is fulfilled when url is loaded
-// //  */
-// Page.prototype.load = function (url) {
-//     this.log('load', url);
-//     browser.get('http://jacekokrojek.github.io/jak-to-zrobic-w-js' + url);
-// };
-
-//  /**
-// //  * Gets page title.
-// //  * @returns A page title.
-// //  */
-// Page.prototype.getTitle = function () {
-//     return browser.driver.getTitle();
-// };
-
-// Page.prototype.log = function (message) {
-//     if (this.logEnabled) {
-//         console.error.apply(console, [clc.cyan('DEBUG|')].concat(Array.prototype.slice.call(arguments)));
-//     }
-// };
-
 module.exports = Page;

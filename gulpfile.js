@@ -12,7 +12,7 @@ var tests = {
     "4": "excercsises/4_inheritance/conf.js"
 };
 
-gulp.task("task", async function () {
+gulp.task("runtest", async function () {
     var options = process.argv.slice(-1);
     runTest(options);
 });
@@ -45,4 +45,4 @@ function runTest(index){
    });
 }
 
-gulp.task("default", gulp.series(gulp.parallel("before", "test", "lint")));
+gulp.task("default", gulp.series("before", "test", "lint"));
