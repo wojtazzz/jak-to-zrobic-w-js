@@ -3,7 +3,7 @@ var contactPage = require('./pages/contact');
 describe('Protractor Workshop app', function () {
 
 	beforeEach(function () {
-		contactPage.get();
+		contactPage.load();
 	});
 
 	it('should have Contact page with title "Protractor workshop | Contact us"', function () {
@@ -13,7 +13,7 @@ describe('Protractor Workshop app', function () {
 	it('should display text "Your message has been sent." when user sends message  ', function () {
 		insertDataAndSubmit();
 		var EC = protractor.ExpectedConditions;
-		const newLocal = 'Your message has been sent.';
+		var newLocal = 'Your message has been sent.';
 		var expectedElement = contactPage.findElementByText(newLocal, 'h3');
 		browser.wait(EC.visibilityOf(expectedElement), 10000, 'Element still not exist');
 		expect(expectedElement.getText()).toEqual(newLocal);
