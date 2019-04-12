@@ -45,4 +45,5 @@ function runTest(index){
    });
 }
 
-gulp.task("default", gulp.parallel("before", "test", "lint"));
+
+gulp.task("default", gulp.series("before", "test", "lint"));

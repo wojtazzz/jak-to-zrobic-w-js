@@ -1,4 +1,4 @@
 {
-    "jslint.config": "/home/jaroslaw/Pulpit/Projekty/JSlint/jsconfig.json",
-    "jslint.version": "es6"
+    "jslint.config": ".jshintrc",
+    "jslint.enable": true
 }

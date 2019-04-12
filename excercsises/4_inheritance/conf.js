@@ -34,7 +34,7 @@ exports.config = {
         displayStacktrace: true
       }));
 
-      jasmine.getEnv().addReporter( new Jasmine2HtmlReporter({}));
+      /*jasmine.getEnv().addReporter( new Jasmine2HtmlReporter({}));*/
 
       browser.ignoreSynchronization = true;
       browser.baseUrl = 'http://aadays.pl';
