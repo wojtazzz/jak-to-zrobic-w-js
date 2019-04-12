@@ -42,6 +42,7 @@ describe('Protractor workshop app', function () {
 			expect(items[0].getText()).toContain('Feature A');
 			expect(items[1].getText()).toContain('Feature B');
 			expect(items[2].getText()).toContain('Feature C');
+			//
 		});
 
 	});

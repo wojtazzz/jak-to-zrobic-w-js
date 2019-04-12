@@ -40,6 +40,7 @@ class ContactPage extends Page {
   };
 
   pushSubmit() {
+
     this.submitButton = element(by.buttonText('Submit')).click();
   };
 

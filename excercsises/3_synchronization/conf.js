@@ -29,7 +29,6 @@ exports.config = {
 		 }));
 	 */
 
-
 		/*var Jasmine2HtmlReporter = require('protractor-jasmine2-html-reporter');
 		jasmine.getEnv().addReporter(new Jasmine2HtmlReporter({}));*/
 
