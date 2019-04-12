@@ -1,5 +1,3 @@
-import { param } from "change-case";
-
 describe('Protractor workshop app', function () {
 
 	/*beforeEach(function () {
