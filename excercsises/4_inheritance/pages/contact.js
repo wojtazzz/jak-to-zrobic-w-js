@@ -20,23 +20,19 @@ var ContactPage = function () {
     Page.prototype.load.call(this, "/contact.html");
   };
   this.inputName = function (txt) {
-    const selector = "name";
-    element(by.id(selector)).sendKeys(txt);
+    this.inputNameField = element(by.id("name")).sendKeys(txt);
   };
 
   this.inputEmail = function (txt) {
-    const selector = "email"
-    element(by.id(selector)).sendKeys(txt);
+    this.inputEmailField = element(by.id("email")).sendKeys(txt);
   };
 
   this.inputMessage = function (txt) {
-    const selector = 'content'
-    element(by.id(selector)).sendKeys(txt);
+    this.inputMsgField = element(by.id('content')).sendKeys(txt);
   };
 
   this.pushSubmit = function () {
-    const selector = 'Submit';
-    element(by.buttonText(selector)).click();
+    this.submitButton = element(by.buttonText('Submit')).click();
   };
 
   this.findElementByText = function (text, tagName = '*') {
