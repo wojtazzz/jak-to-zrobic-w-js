@@ -1,41 +1,40 @@
-var Page = require('/home/bartosz/Desktop/Jacek/excercsises/test1/pages/page.js');
+var Page = require('./page.js');
 
-var HomePage = function() {
+class HomePage extends Page {
 
-  this.menuItems = element.all(by.css('ul.nav > li > a')); 
+  menuItems(){
+    return element.all(by.css('ul.nav > li > a')); 
+  }
 
-  Page.call(this);
-
+  waitForResponse(text){
+    super.waitForResponse(text, 15000);
+  };
   
-  HomePage.prototype.load = function(){
-    Page.prototype.load.call(this, '/index.html');
+  load (){
+     super.load('/index.html');
   }
 
 
-
-  this.clickMenuAtIdx = function(idx) {
-    this.menuItems.get(idx).click();
+  clickMenuAtIdx (idx) {
+    this.menuItems().get(idx).click();
   };
 
-  this.getMenuTextAtIdx = function(idx) {
-    return this.menuItems.get(idx);
+  getMenuTextAtIdx (idx) {
+    return this.menuItems().get(idx);
   };
 
-  this.getDropdown = function(){
+  getDropdown (){
     return element(by.css('.dropdown-menu'));
   };
 
-  this.nextButton = function(){
+  nextButton (){
     return element(by.css('a.right')).click();
   }
   
-  this.getHeader2 = function () {
+  getHeader2() {
     return element(by.xpath("//h1[contains(text(), 'Example headline 2')]"));
   };
   
 };
-
-HomePage.prototype = Object.create(Page.prototype);
-HomePage.prototype.constructor = HomePage;
 
 module.exports = new HomePage();

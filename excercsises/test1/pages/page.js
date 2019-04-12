@@ -1,16 +1,23 @@
-var Page = function () {};
+class Page {
 
-Page.prototype.logEnabled = true;
+    
+    load(url) {
+        browser.get('http://jacekokrojek.github.io/jak-to-zrobic-w-js' + url);
+    };
 
-Page.prototype.load = function (url) {
-    //this.log('load', url);
-    browser.get('http://jacekokrojek.github.io/jak-to-zrobic-w-js' + url);
-};
+    waitForResponse(text, time) {
+        var ec = protractor.ExpectedConditions;
+        browser.wait(ec.visibilityOf(text, time))
+
+    };
 
 
+    getTitle() {
+        return browser.driver.getTitle();
+    };
 
-Page.prototype.getTitle = function () {
-    return browser.driver.getTitle();
-};
+}
+
+
 
 module.exports = Page;

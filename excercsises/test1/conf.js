@@ -2,7 +2,7 @@ exports.config = {
 
     directConnect: true,
 
-    specs: ['home.spec.js'],
+	specs: ['*.spec.js'],
 
     capabilities: {
       'browserName' : 'chrome',

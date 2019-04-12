@@ -1,53 +1,59 @@
-var ContactPage = function() {
+var Page = require('./page.js');
 
-  this.menuItems = element.all(by.css('ul.nav > li > a')); 
+class ContactPage extends Page {
 
-  this.get = function() {
-    browser.driver.get('http://jacekokrojek.github.io/jak-to-zrobic-w-js/contact.html');
-  };
+    load(){
+      super.load('/contact.html');
+    };
 
-  this.getTitle = function() {
-    return browser.driver.getTitle();
-  };
+    waitForResponse (text){
+      super.waitForResponse(text, 15000);
+    };
 
-  this.clickMenuItemAt = function(idx) {
-    this.menuItems.get(idx).click();
-  };
-
-  this.getName = function(){
-    return element(by.css('#name'))
-  };
-
-  this.sendName = function (name) {
-    this.getName().sendKeys(name)
-  };
-
-  this.getEmail = function () {
-    return element(by.css('#email'))
-  };
-
-  this.sendEmail = function (email) {
-    this.getEmail().sendKeys(email)
-  };
-
-  this.getMessage = function () {
-    return element(by.css('#content'))
-  };
-
-  this.sendMsg = function(msg){
-    this.getMessage().sendKeys(msg)
-  };
+    menuItems (){
+      return element.all(by.css('ul.nav > li > a'));
+    };
 
 
-  this.clickSubmit = function(){
+    clickMenuItemAt (idx){
+      this.menuItems().get(idx).click();
+    };
+
+    getName () {
+      return element(by.css('#name'));
+    };
+
+    sendName (name){
+      this.getName().sendKeys(name)
+    };
+
+    getEmail(){
+      return element(by.css('#email'))
+    };
+
+    sendEmail(email) {
+      this.getEmail().sendKeys(email)
+    };
+
+    getMessage (){
+      return element(by.css('#content'))
+    };
+
+    sendMsg(msg){
+      this.getMessage().sendKeys(msg)
+    };
+
+
+    clickSubmit(){
       element(by.css('button[type = "submit"]')).click();
-  };
+    };
 
 
-  this.findMessageBy = function (text, tagName ='*') {
-    return element(by.xpath("//" +tagName+ "[contains(text(),'" + text + "')]"));
+    findMessageBy(text, tagName = '*') {
+        return element(by.xpath("//h3[contains(text(), 'Your message has been sent.')]"));
+    };
 
-};
-};
+}
+
 
 module.exports = new ContactPage();

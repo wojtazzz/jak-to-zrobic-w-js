@@ -14,7 +14,6 @@ var HomePage = function() {
 
   this.menuItems = element.all(by.css('ul.nav > li > a')); 
 
-  
 
   this.clickMenuAtIdx = function(idx) {
     this.menuItems.get(idx).click();
