@@ -13,9 +13,8 @@ describe('Protractor Workshop app', function() {
 	it('should have "Example headline 2" carousel item after clicking on next arrow', function(){
 		var expectedHeader = 'Example Headline 2'
 		homePage.pushNextButton();
-		var EC = protractor.ExpectedConditions;
 		var headline = homePage.findHeadline();
-		browser.wait(EC.visibilityOf(headline), 1000, 'Element still not exist');
+		homePage.waitForElement(headline);
 		expect(headline.getText()).toEqual(expectedHeader);
 	});
 	
@@ -23,7 +22,7 @@ describe('Protractor Workshop app', function() {
 		homePage.clickMenuAtIdx(1);
 		var EC = protractor.ExpectedConditions;
 		var dropdownMenu = homePage.findDropdown();
-		browser.wait(EC.visibilityOf(dropdownMenu), 500, 'Element still not exist');
+		homePage.waitForElement(dropdownMenu);
 		expect(dropdownMenu.isDisplayed()).toBe(true);
 	});
 

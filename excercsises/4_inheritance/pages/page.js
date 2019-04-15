@@ -1,22 +1,27 @@
-var clc = require('cli-color');
+var clc = require("cli-color");
 
-var Page = function () { };
+class Page {
 
-Page.prototype.logEnabled = true;
-
-Page.prototype.load = function (url) {
-    this.log('load', url);
-    browser.get('http://jacekokrojek.github.io/jak-to-zrobic-w-js' + url);
-};
-
-Page.prototype.getTitle = function () {
-    return browser.driver.getTitle();
-};
-
-Page.prototype.log = function (message) {
-    if (this.logEnabled) {
-        console.error.apply(console, [clc.cyan('DEBUG|')].concat(Array.prototype.slice.call(arguments)));
+    constructor() {
+        this.logEnabled = true;
     }
-};
 
+    load(url) {
+        this.log("load", url);
+        browser.get("http://jacekokrojek.github.io/jak-to-zrobic-w-js" + url);
+    }
+
+    getTitle() {
+        return browser.driver.getTitle();
+    }
+    log() {
+        if (this.logEnabled) {
+            console.error.apply(console, [clc.cyan("DEBUG|")].concat(Array.prototype.slice.call(arguments)));
+        }
+    }
+    waitForElement(elem, time) {
+        var EC = protractor.ExpectedConditions;
+        browser.wait(EC.visibilityOf(elem), time, "Element still not exist");
+    }
+}
 module.exports = Page;
